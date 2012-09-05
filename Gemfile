@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.3'
+gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -22,7 +22,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -40,15 +40,15 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 
-gem 'refinerycms', :git => 'git://github.com/resolve/refinerycms.git'
+gem 'refinerycms', :git => 'git://github.com/refinery/refinerycms.git'
 
 # USER DEFINED
 
 # Specify additional Refinery CMS Engines here (all optional):
 gem 'refinerycms-i18n', :git => 'git://github.com/parndt/refinerycms-i18n.git'
-#  gem 'refinerycms-blog', :git => 'git://github.com/resolve/refinerycms-blog.git'
-#  gem 'refinerycms-inquiries', :git => 'git://github.com/resolve/refinerycms-inquiries.git'
-#  gem 'refinerycms-search', :git => 'git://github.com/resolve/refinerycms-search.git'
-#  gem 'refinerycms-page-images', :git => 'git://github.com/resolve/refinerycms-page-images.git'
+#  gem 'refinerycms-blog', :git => 'git://github.com/refinery/refinerycms-blog.git'
+#  gem 'refinerycms-inquiries', :git => 'git://github.com/refinery/refinerycms-inquiries.git'
+#  gem 'refinerycms-search', :git => 'git://github.com/refinery/refinerycms-search.git'
+#  gem 'refinerycms-page-images', :git => 'git://github.com/refinery//refinerycms-page-images.git'
 
 # END USER DEFINED
