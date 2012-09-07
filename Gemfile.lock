@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/refinery/refinerycms.git
-  revision: 3d558fc6861e0e69c6ed6d7fea8aa786eedf0922
+  revision: c393f36b1dca974eba9c046affcb82c7a6e329c6
   specs:
     refinerycms (2.1.0.dev)
       bundler (~> 1.0)
@@ -96,7 +96,7 @@ GEM
       activerecord (>= 3.0.0)
     babosa (0.3.8)
     bcrypt-ruby (3.0.1)
-    builder (3.0.0)
+    builder (3.0.2)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)

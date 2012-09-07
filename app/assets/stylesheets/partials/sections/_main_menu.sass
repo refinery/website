@@ -1,0 +1,42 @@
+nav#menu ul
+  margin-top: 29px
+  float: right
+  // Generic styles (cross-level)
+  a
+    color: #000
+    text-decoration: none
+    font-weight: bold
+  
+  // First-level items
+  > li
+    display: inline-block
+
+    > a
+      text-align: center
+      display: block
+      padding: 5px 20px
+      line-height: 42px
+      font-size: 120%
+
+      &:hover
+        background-color: #CCC
+
+
+
+    // Second-level items
+    > ul
+      display: none
+
+      > li
+      
+        > a
+
+        // Third-level items
+        > ul
+          > li
+
+            > a
+
+            // Okay, this is ridiculous.
+            > ul
+              display: none

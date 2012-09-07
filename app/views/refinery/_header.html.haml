@@ -1,0 +1,5 @@
+.container
+  .four.columns
+    %h1#logo= link_to Refinery::Core.site_name, refinery.root_path
+  .twelve.columns
+    = render "/refinery/menu", :dom_id => 'menu', :css => 'menu'
