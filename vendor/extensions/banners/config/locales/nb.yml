@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      banners:
+        title: Banners
+    banners:
+      admin:
+        banners:
+          actions:
+            create_new: Lag en ny Banner
+            reorder: Endre rekkefølgen på Banners
+            reorder_done: Ferdig å endre rekkefølgen Banners
+          records:
+            title: Banners
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Banners enda. Klikk på "Lag en ny Banner" for å legge til din første banner.
+          banner:
+            view_live_html: Vis hvordan denne banner ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne banner
+            delete: Fjern denne banner permanent
+      banners:
+        show:
+          other: Andre Banners
+  activerecord:
+    attributes:
+      'refinery/banners/banner':
+        title: Title
+        picture: Picture
+        caption: Caption
+        link_url: Link Url

@@ -53,6 +53,13 @@ GIT
       rack-cache (>= 0.5.3)
       refinerycms-core (= 2.1.0.dev)
 
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-banners (1.0)
+      acts_as_indexed (~> 0.7)
+      refinerycms-core (~> 2.1.0.dev)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -199,6 +206,7 @@ DEPENDENCIES
   pg
   rails (= 3.2.8)
   refinerycms!
+  refinerycms-banners!
   refinerycms-i18n!
   sass-rails (~> 3.2.3)
   uglifier (>= 1.0.3)

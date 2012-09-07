@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      banners:
+        title: Banners
+    banners:
+      admin:
+        banners:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Banner
+            reorder: Réordonner les Banners
+            reorder_done: Fin de réordonnancement des Banners
+          records:
+            title: Banners
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Banner. Cliquer sur "Créer un(e) nouve(au/l/lle) Banner" pour créer votre premi(er/ère) banner.'
+          banner:
+            view_live_html: Voir ce(t/tte) banner <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) banner
+            delete: Supprimer définitivement ce(t/tte) banner
+      banners:
+        show:
+          other: Autres Banners
+  activerecord:
+    attributes:
+      'refinery/banners/banner':
+        title: Title
+        picture: Picture
+        caption: Caption
+        link_url: Link Url

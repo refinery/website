@@ -1,0 +1,30 @@
+en:
+  refinery:
+    plugins:
+      banners:
+        title: Banners
+    banners:
+      admin:
+        banners:
+          actions:
+            create_new: Add New Banner
+            reorder: Reorder Banners
+            reorder_done: Done Reordering Banners
+          records:
+            title: Banners
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Banners yet. Click "Add New Banner" to add your first banner.
+          banner:
+            view_live_html: View this banner live <br/><em>(opens in a new window)</em>
+            edit: Edit this banner
+            delete: Remove this banner forever
+      banners:
+        show:
+          other: Other Banners
+  activerecord:
+    attributes:
+      'refinery/banners/banner':
+        title: Title
+        picture: Picture
+        caption: Caption
+        link_url: Link Url

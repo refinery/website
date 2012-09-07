@@ -1,0 +1,30 @@
+sk:
+  refinery:
+    plugins:
+      banners:
+        title: Banners
+    banners:
+      admin:
+        banners:
+          actions:
+            create_new: Pridať Banner
+            reorder: Preusporiadať Banners
+            reorder_done: Koniec radenia Banners
+          records:
+            title: Banners
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Banners. Kliknite na "Pridať Banner" pre pridanie prvého banner.
+          banner:
+            view_live_html: Zobraziť náhľad banner<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť banner
+            delete: Zmazať banner
+      banners:
+        show:
+          other: Daľšie Banners
+  activerecord:
+    attributes:
+      'refinery/banners/banner':
+        title: Title
+        picture: Picture
+        caption: Caption
+        link_url: Link Url
