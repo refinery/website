@@ -12,9 +12,14 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= require jquery.flexslider-min.js
+#= require skitter
 #= require_self
 
 $ ->
-  $('#banners').flexslider()
-
+  $('.box_skitter').skitter
+    animation: 'circlesInside'
+    # dots: true
+    hideTools: true
+    numbers_align: 'center'
+    enable_navigation_keys: true
+    interval: 6500

@@ -1,13 +1,14 @@
 #banners
   .container
-    .flexslider.sixteen.columns
+    .box_skitter.sixteen.columns
       %ul.slides
         - @banners.each do |banner|
           %li
-            .image
-              = link_to banner.link_url do
-                = image_fu banner.picture, '950x400'
-            -# .title= banner.title
-              .caption= banner.caption
+            .label_text
+              %p.caption= banner.caption
+            = link_to banner.link_url do
+              = image_fu banner.picture, '960x550#'
 
-= render '/refinery/content_page'
+.container
+  .sixteen.columns
+    = render '/refinery/content_page'

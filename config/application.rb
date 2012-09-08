@@ -55,5 +55,8 @@ module RefineryWebsite
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'skitter')
+    config.assets.paths << Rails.root.join('vendor', 'assets', 'skeleton')
   end
 end

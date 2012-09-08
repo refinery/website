@@ -10,6 +10,7 @@ nav#menu ul
   // First-level items
   > li
     display: inline-block
+    position: relative
 
     > a
       text-align: center
@@ -19,15 +20,23 @@ nav#menu ul
       font-size: 120%
 
       &:hover
-        background-color: #CCC
-
-
+        background-color: $banner_background
+        color: #FFF
 
     // Second-level items
     > ul
       display: none
 
+    &:hover > ul
+      display: none
+      // float: left
+      // z-index: 50
+      // display: block
+      // position: relative
+      // top: 21px
+
       > li
+        display: block
       
         > a
 
