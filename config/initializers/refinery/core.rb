@@ -8,10 +8,10 @@ Refinery::Core.configure do |config|
 
   # Set the S3 options using means other than securely by environment variables.
   # If you have to.
-  # config.s3_bucket_name = ENV['S3_BUCKET']
-  # config.s3_region = ENV['S3_REGION']
-  # config.s3_access_key_id = ENV['S3_KEY']
-  # config.s3_secret_access_key = ENV['S3_SECRET']
+  config.s3_bucket_name = ENV['S3_BUCKET']
+  config.s3_region = ENV['S3_REGION']
+  config.s3_access_key_id = ENV['S3_KEY']
+  config.s3_secret_access_key = ENV['S3_SECRET']
 
   # When true will use Amazon's Simple Storage Service instead of
   # the default file system for storing resources and images
@@ -27,12 +27,12 @@ Refinery::Core.configure do |config|
   # config.base_cache_key = :refinery
 
   # Site name
-  # config.site_name = "Company Name"
+  config.site_name = "Refinery CMS"
 
   # This activates Google Analytics tracking within your website. If this
   # config is left blank or set to UA-xxxxxx-x then no remote calls to
   # Google Analytics are made.
-  # config.google_analytics_page_code = "UA-xxxxxx-x"
+  config.google_analytics_page_code = ENV['GOOGLE_UA']
 
   # Enable/disable authenticity token on frontend
   # config.authenticity_token_on_frontend = false
