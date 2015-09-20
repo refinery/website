@@ -9,7 +9,7 @@ Refinery::Pages.configure do |config|
   # config.default_parts = ["Body", "Side Body"]
 
   # Configure whether to allow adding new page parts
-  # config.new_page_parts = false
+  config.new_page_parts = true
 
   # Configure whether to enable marketable_urls
   # config.marketable_urls = true
@@ -44,7 +44,7 @@ Refinery::Pages.configure do |config|
   # config.cache_pages_backend = false
 
   # Set this to true to activate full-page-cache
-  # config.cache_pages_full = false
+  config.cache_pages_full = Rails.env.production?
 
   # Set this to true to fully expand the page hierarchy in the admin
   # config.auto_expand_admin_tree = true
