@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920034163) do
+ActiveRecord::Schema.define(version: 20150923024340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,6 +135,15 @@ ActiveRecord::Schema.define(version: 20150920034163) do
   add_index "refinery_blog_posts", ["access_count"], name: "index_refinery_blog_posts_on_access_count", using: :btree
   add_index "refinery_blog_posts", ["id"], name: "index_refinery_blog_posts_on_id", using: :btree
   add_index "refinery_blog_posts", ["slug"], name: "index_refinery_blog_posts_on_slug", using: :btree
+
+  create_table "refinery_extension_inquiries", force: :cascade do |t|
+    t.string   "github_repo"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "refinery_extension_inquiries", ["id"], name: "index_refinery_extension_inquiries_on_id", using: :btree
 
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", null: false
