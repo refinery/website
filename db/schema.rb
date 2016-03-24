@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150923024340) do
+ActiveRecord::Schema.define(version: 20160309023933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -269,6 +269,62 @@ ActiveRecord::Schema.define(version: 20150923024340) do
   end
 
   add_index "refinery_settings", ["name"], name: "index_refinery_settings_on_name", using: :btree
+
+  create_table "refinery_team_translations", force: :cascade do |t|
+    t.integer  "refinery_team_id", null: false
+    t.string   "locale",           null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.text     "body"
+    t.string   "job_title"
+  end
+
+  add_index "refinery_team_translations", ["locale"], name: "index_refinery_team_translations_on_locale", using: :btree
+  add_index "refinery_team_translations", ["refinery_team_id"], name: "index_refinery_team_translations_on_refinery_team_id", using: :btree
+
+  create_table "refinery_teams", force: :cascade do |t|
+    t.string   "fullname"
+    t.string   "job_title"
+    t.text     "body"
+    t.integer  "photo_id"
+    t.string   "email"
+    t.integer  "draft",      default: 1
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_teams_categories", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "parent_id"
+    t.integer  "lft"
+    t.integer  "rgt"
+    t.integer  "depth"
+  end
+
+  add_index "refinery_teams_categories", ["id"], name: "index_refinery_teams_categories_on_id", using: :btree
+
+  create_table "refinery_teams_categories_teams", force: :cascade do |t|
+    t.integer "teams_category_id"
+    t.integer "team_id"
+  end
+
+  add_index "refinery_teams_categories_teams", ["teams_category_id", "team_id"], name: "index_refinery_teams_categories_teams_on_tc_and_t", using: :btree
+
+  create_table "refinery_teams_category_translations", force: :cascade do |t|
+    t.integer  "refinery_teams_category_id", null: false
+    t.string   "locale",                     null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.string   "title"
+    t.string   "slug"
+  end
+
+  add_index "refinery_teams_category_translations", ["locale"], name: "index_refinery_teams_category_translations_on_locale", using: :btree
+  add_index "refinery_teams_category_translations", ["refinery_teams_category_id"], name: "index_8bb23d58e558e7b4921421486f34aa9805784dee", using: :btree
 
   create_table "seo_meta", force: :cascade do |t|
     t.integer  "seo_meta_id"
