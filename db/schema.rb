@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160309023933) do
+ActiveRecord::Schema.define(version: 20160414025756) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -144,6 +144,17 @@ ActiveRecord::Schema.define(version: 20160309023933) do
   end
 
   add_index "refinery_extension_inquiries", ["id"], name: "index_refinery_extension_inquiries_on_id", using: :btree
+
+  create_table "refinery_extensions", force: :cascade do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "source_url"
+    t.string   "author"
+    t.boolean  "draft"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "refinery_image_translations", force: :cascade do |t|
     t.integer  "refinery_image_id", null: false

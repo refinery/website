@@ -1,0 +1,50 @@
+<%= form_for [refinery, :extensions_admin, @extension] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @extension,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :source_url -%>
+    <%= f.text_field :source_url, :class => 'larger' -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:body],
+                :object => "extensions/extension" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :tag_list -%>
+    <%= f.text_field :tag_list, value: @extension.tag_list.to_s, :class => 'larger' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :author -%>
+    <%= f.text_field :author -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :draft -%>
+    <%= f.check_box :draft, :checked => @extension[:draft] -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.extensions.admin.extensions.extension'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @extension.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

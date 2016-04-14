@@ -14,3 +14,6 @@ Refinery::Blog::Engine.load_seed
 
 # Added by Refinery CMS Teams extension
 Refinery::Teams::Engine.load_seed
+
+# Added by Refinery CMS Extensions extension
+Refinery::Extensions::Engine.load_seed

@@ -1,0 +1,33 @@
+zh-CN:
+  refinery:
+    plugins:
+      extensions:
+        title: Extensions
+    extensions:
+      admin:
+        extensions:
+          actions:
+            create_new: 建立新的 Extension
+            reorder: 对 Extensions 重新排序
+            reorder_done: 对 Extensions 的重新排序结束
+          records:
+            title: Extensions
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Extensions yet. Click "Add New Extension" to add your first extension.
+            no_items_yet: 目前没有 Extensions . 点击 "Add New Extension" 创建一个extension.
+          extension:
+            view_live_html: 查看 extension 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 extension
+            delete: 永久删除 extension
+      extensions:
+        show:
+          other: 其他 Extensions
+  activerecord:
+    attributes:
+      'refinery/extensions/extension':
+        title: Title
+        body: Body
+        source_url: Source Url
+        author: Author
+        draft: Draft

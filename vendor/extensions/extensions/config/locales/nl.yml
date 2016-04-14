@@ -1,0 +1,31 @@
+nl:
+  refinery:
+    plugins:
+      extensions:
+        title: Extensions
+    extensions:
+      admin:
+        extensions:
+          actions:
+            create_new: Nieuwe Extension toevoegen
+            reorder: De volgorde van de Extensions wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Extension-volgorde
+          records:
+            title: Extensions
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Extensions. Druk op 'Nieuwe Extension toevoegen' om de eerste toe te voegen.
+          extension:
+            view_live_html: Deze extension op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze extension
+            delete: Deze extension definitief verwijderen
+      extensions:
+        show:
+          other: Andere Extensions
+  activerecord:
+    attributes:
+      'refinery/extensions/extension':
+        title: Title
+        body: Body
+        source_url: Source Url
+        author: Author
+        draft: Draft

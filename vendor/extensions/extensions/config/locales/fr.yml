@@ -1,0 +1,31 @@
+fr:
+  refinery:
+    plugins:
+      extensions:
+        title: Extensions
+    extensions:
+      admin:
+        extensions:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Extension
+            reorder: Réordonner les Extensions
+            reorder_done: Fin de réordonnancement des Extensions
+          records:
+            title: Extensions
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Extension. Cliquer sur "Créer un(e) nouve(au/l/lle) Extension" pour créer votre premi(er/ère) extension.'
+          extension:
+            view_live_html: Voir ce(t/tte) extension <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) extension
+            delete: Supprimer définitivement ce(t/tte) extension
+      extensions:
+        show:
+          other: Autres Extensions
+  activerecord:
+    attributes:
+      'refinery/extensions/extension':
+        title: Title
+        body: Body
+        source_url: Source Url
+        author: Author
+        draft: Draft

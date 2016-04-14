@@ -1,0 +1,31 @@
+tr:
+  refinery:
+    plugins:
+      extensions:
+        title: Extensions
+    extensions:
+      admin:
+        extensions:
+          actions:
+            create_new: Yeni Ekle Extension
+            reorder: Tekrar sirala Extensions
+            reorder_done: Tekrar siralama tamamlandiExtensions
+          records:
+            title: Extensions
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Extensions yok henuz.  Tikla "Yeni Ekle Extension" eklemek senin ilk extension.
+          extension:
+            view_live_html: Bunu canlu extension goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle extension
+            delete: Bunu Sil extension sonsuza dek
+      extensions:
+        show:
+          other: Diger Extensions
+  activerecord:
+    attributes:
+      'refinery/extensions/extension':
+        title: Title
+        body: Body
+        source_url: Source Url
+        author: Author
+        draft: Draft

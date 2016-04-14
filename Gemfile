@@ -91,3 +91,5 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 gem 'refinerycms-teams', git: 'https://github.com/bisscomm/refinerycms-teams', branch: 'master'
+
+gem 'refinerycms-extensions', path: 'vendor/extensions'

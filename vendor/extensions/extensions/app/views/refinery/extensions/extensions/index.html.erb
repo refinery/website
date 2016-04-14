@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="extensions">
+    <% @extensions.each do |extension| %>
+      <li>
+        <%= link_to extension.title, refinery.extensions_extension_path(extension) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

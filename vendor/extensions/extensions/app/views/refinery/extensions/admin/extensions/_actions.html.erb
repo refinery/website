@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Extensions::Admin::ExtensionsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.extensions_admin_extensions_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_extensions_admin_extension_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Extensions::Admin::ExtensionsController.sortable? && ::Refinery::Extensions::Extension.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.extensions_admin_extensions_path,
+                     t('.reorder', what:  "Extensions"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.extensions_admin_extensions_path,
+                      t('.reorder_done', what: "Extensions"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

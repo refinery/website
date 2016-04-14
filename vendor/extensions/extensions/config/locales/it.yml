@@ -1,0 +1,31 @@
+it:
+  refinery:
+    plugins:
+      extensions:
+        title: Extensions
+    extensions:
+      admin:
+        extensions:
+          actions:
+            create_new: Aggiungi Nuovo Extension
+            reorder: Riordina Extensions
+            reorder_done: Termina il Riordino di Extensions
+          records:
+            title: Extensions
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Extensions. Clicca "Aggiungi Nuovo Extension" per aggiungere il tuo primo extension.
+          extension:
+            view_live_html: Guarda live questo extension <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo extension
+            delete: Rimuovi per sempre questo extension
+      extensions:
+        show:
+          other: Altri Extensions
+  activerecord:
+    attributes:
+      'refinery/extensions/extension':
+        title: Title
+        body: Body
+        source_url: Source Url
+        author: Author
+        draft: Draft

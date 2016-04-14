@@ -70,6 +70,14 @@ GIT
       refinerycms-settings (~> 3.0.0)
       seo_meta (~> 2.0.0.rc.1)
 
+PATH
+  remote: vendor/extensions
+  specs:
+    refinerycms-extensions (1.0)
+      acts-as-taggable-on (~> 3.4)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -417,6 +425,7 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.0)
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-blog!
+  refinerycms-extensions!
   refinerycms-teams!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)

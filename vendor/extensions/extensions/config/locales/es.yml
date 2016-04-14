@@ -1,0 +1,32 @@
+es:
+  refinery:
+    plugins:
+      extensions:
+        title: Extensions
+#        article: masculino/femenino
+    extensions:
+      admin:
+        extensions:
+          actions:
+            create_new: Crear nuevo extension
+            reorder: Reordenar extensions
+            reorder_done: Reordenación de extensions completada
+          records:
+            title: Extensions
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay extensions todavía. Pulsa en "Crear nuevo Extension" para crear tu primer extension.
+          extension:
+            view_live_html: Ver este extension como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este extension
+            delete: Borrar este extension para siempre
+      extensions:
+        show:
+          other: Otros extensions
+  activerecord:
+    attributes:
+      'refinery/extensions/extension':
+        title: Title
+        body: Body
+        source_url: Source Url
+        author: Author
+        draft: Draft

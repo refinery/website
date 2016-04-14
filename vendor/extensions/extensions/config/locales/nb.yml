@@ -1,0 +1,31 @@
+nb:
+  refinery:
+    plugins:
+      extensions:
+        title: Extensions
+    extensions:
+      admin:
+        extensions:
+          actions:
+            create_new: Lag en ny Extension
+            reorder: Endre rekkefølgen på Extensions
+            reorder_done: Ferdig å endre rekkefølgen Extensions
+          records:
+            title: Extensions
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Extensions enda. Klikk på "Lag en ny Extension" for å legge til din første extension.
+          extension:
+            view_live_html: Vis hvordan denne extension ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne extension
+            delete: Fjern denne extension permanent
+      extensions:
+        show:
+          other: Andre Extensions
+  activerecord:
+    attributes:
+      'refinery/extensions/extension':
+        title: Title
+        body: Body
+        source_url: Source Url
+        author: Author
+        draft: Draft

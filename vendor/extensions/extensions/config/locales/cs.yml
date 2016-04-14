@@ -1,0 +1,31 @@
+cs:
+  refinery:
+    plugins:
+      extensions:
+        title: Extensions
+    extensions:
+      admin:
+        extensions:
+          actions:
+            create_new: Přidat Extension
+            reorder: Řadit Extensions
+            reorder_done: Konec řazení Extensions
+          records:
+            title: Extensions
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Extensions. Zvolte "Přidat Extension" pro přidání prvního extension.
+          extension:
+            view_live_html: Zobrazit náhled extension<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit extension
+            delete: Smazat extension
+      extensions:
+        show:
+          other: Další Extensions
+  activerecord:
+    attributes:
+      'refinery/extensions/extension':
+        title: Title
+        body: Body
+        source_url: Source Url
+        author: Author
+        draft: Draft

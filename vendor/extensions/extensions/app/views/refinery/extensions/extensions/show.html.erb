@@ -1,0 +1,51 @@
+<% content_for :body_content_title do %>
+  <%= @extension.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @extension.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Body</h1>
+    <p>
+      <%=raw @extension.body %>
+    </p>
+  </section>
+  <section>
+    <h1>Source Url</h1>
+    <p>
+      <%=raw @extension.source_url %>
+    </p>
+  </section>
+  <section>
+    <h1>Author</h1>
+    <p>
+      <%=raw @extension.author %>
+    </p>
+  </section>
+  <section>
+    <h1>Draft</h1>
+    <p>
+      <%=raw @extension.draft %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="extensions">
+      <% @extensions.each do |extension| %>
+        <li>
+          <%= link_to extension.title, refinery.extensions_extension_path(extension) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>
