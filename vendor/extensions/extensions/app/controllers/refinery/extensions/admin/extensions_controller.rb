@@ -9,7 +9,7 @@ module Refinery
 
         # Only allow a trusted parameter "white list" through.
         def extension_params
-          params.require(:extension).permit(:title, :source_url, :body, :tag_list, :author, :draft)
+          params.require(:extension).permit(:title, :source_url, :body, :type_list, :version_list, :author, :draft)
         end
       end
     end

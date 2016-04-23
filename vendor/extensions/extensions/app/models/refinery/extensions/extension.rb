@@ -3,7 +3,7 @@ module Refinery
     class Extension < Refinery::Core::BaseModel
       self.table_name = 'refinery_extensions'
 
-      acts_as_taggable
+      acts_as_taggable_on :versions, :types
 
       validates :title, :presence => true, :uniqueness => true
 
@@ -11,6 +11,15 @@ module Refinery
       #
       #   acts_as_indexed :fields => [:title]
 
+      def live?
+        !draft
+      end
+
+      class << self
+        def live
+          where(draft: false)
+        end
+      end
     end
   end
 end

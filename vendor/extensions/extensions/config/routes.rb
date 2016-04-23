@@ -3,6 +3,9 @@ Refinery::Core::Engine.routes.draw do
   # Frontend routes
   namespace :extensions do
     resources :extensions, :path => '', :only => [:index]
+
+    get 'version/:tag_id(/:tag_name)' => 'extensions#tagged', :as => 'version_extensions'
+    get 'type/:tag_id(/:tag_name)' => 'extensions#tagged', :as => 'type_extensions'
   end
 
   # Admin routes

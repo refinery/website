@@ -1,8 +1,37 @@
 <% content_for :body do %>
+  <% if @ext_versions.any? || @ext_types.any? %>
+    <h2><%= t('.title') %></h2>
+    <%= link_to 'All', refinery.extensions_extensions_path %>
+    <% if @ext_versions.any? %>
+      <nav id='ext_versions'>
+        <% tag_cloud(@ext_versions, %w(tag1 tag2 tag3 tag4)) do |version, css_class| %>
+          <%= link_to version.name, refinery.extensions_version_extensions_path(version.id, version.name.parameterize), :class => css_class %>
+        <% end %>
+      </nav>
+    <% end %>
+
+    <% if @ext_types.any? %>
+      <nav id='ext_types'>
+        <% tag_cloud(@ext_types, %w(tag1 tag2 tag3 tag4)) do |type, css_class| %>
+          <%= link_to type.name, refinery.extensions_type_extensions_path(type.id, type.name.parameterize), :class => css_class %>
+        <% end %>
+      </nav>
+    <% end %>
+  <% end %>
+
   <ul id="extensions">
     <% @extensions.each do |extension| %>
       <li>
-        <%= link_to extension.title, refinery.extensions_extension_path(extension) %>
+        <h2>
+          <%= link_to extension.title, extension.source_url, target: '_blank' %>
+        </h2>
+        <%= raw extension.body %>
+        <p>
+          <em><%= t('.works_with_refinery_cms', versions: extension.versions.to_sentence) %></em>
+        </p>
+        <p>
+          <em><%= t('.type', types: extension.types.to_sentence) %></em>
+        </p>
       </li>
     <% end %>
   </ul>

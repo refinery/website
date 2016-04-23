@@ -21,8 +21,13 @@
   </div>
 
   <div class='field'>
-    <%= f.label :tag_list -%>
-    <%= f.text_field :tag_list, value: @extension.tag_list.to_s, :class => 'larger' -%>
+    <%= f.label :type_list -%>
+    <%= f.text_field :type_list, value: @extension.type_list.to_s, :class => 'larger' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :version_list -%>
+    <%= f.text_field :version_list, value: @extension.version_list.to_s, :class => 'larger' -%>
   </div>
 
   <div class='field'>

@@ -19,6 +19,9 @@ en:
             edit: Edit this extension
             delete: Remove this extension forever
       extensions:
+        index:
+          works_with_refinery_cms: "Works with Refinery CMS %{versions}"
+          type: "%{types}"
         show:
           other: Other Extensions
   activerecord:
