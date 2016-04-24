@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   # TODO : Remove this basic HTTP authentication before delivery
-  before_action :authenticate, if: "Rails.env.production?"
+  # before_action :authenticate, if: "Rails.env.production?"
 
   protected
 
