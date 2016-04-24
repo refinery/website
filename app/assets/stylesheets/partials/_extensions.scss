@@ -23,7 +23,12 @@
     li {
       float: left;
       padding-top: 0.5em;
-      width: 50%;
+      width: 47%;
+      margin-right: 3%
+
+      &:nth-child(2n+1) {
+        clear: left;
+      }
 
       &:after {
         border-top: 1px solid #1e1e1e;
@@ -38,10 +43,9 @@
 
       .title {
         h2 {
-          display: inline-block;
           font-size: 1.4em;
           font-weight: normal;
-          margin: 0;
+          margin: 0 0 0.5em;
           vertical-align: text-top;
 
           a {
@@ -53,17 +57,20 @@
           }
         }
 
-        .type {
-          background-color: #c9c9c9;
-          border-radius: 0.5em;
-          color: #404040;
-          display: inline-block;
-          font-size: 0.75em;
-          font-style: italic;
-          padding: 0.15em 0.3em;
-          margin-right: 0.5em;
-          vertical-align: super;
+        .types {
+          .type {
+            background-color: #c9c9c9;
+            border-radius: 0.5em;
+            color: #404040;
+            display: inline-block;
+            font-size: 0.75em;
+            font-style: italic;
+            padding: 0.2em 0.3em;
+            margin-right: 0.25em;
+            vertical-align: super;
+          }
         }
+
       }
 
       p {
