@@ -3,7 +3,8 @@ module Refinery
     module Admin
       class ExtensionsController < ::Refinery::AdminController
 
-        crudify :'refinery/extensions/extension'
+        crudify :'refinery/extensions/extension',
+                order: :position
 
         private
 
