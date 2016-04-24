@@ -1,7 +1,6 @@
 module Refinery
   module Extensions
     class ExtensionsController < ::ApplicationController
-
       before_action :find_all_extensions
       before_action :find_page
       before_action :find_versions
@@ -11,6 +10,8 @@ module Refinery
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @extension in the line below:
         present(@page)
+
+        render layout: @page.layout_template if @page.layout_template.present?
       end
 
       def show
