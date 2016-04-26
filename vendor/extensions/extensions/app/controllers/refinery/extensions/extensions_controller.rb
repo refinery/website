@@ -41,7 +41,7 @@ module Refinery
       end
 
       def find_all_extensions
-        @extensions = Extension.order(:position)
+        @extensions = Extension.live.order(:position)
       end
 
       def find_page
