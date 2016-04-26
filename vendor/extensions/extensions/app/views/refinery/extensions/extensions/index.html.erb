@@ -29,14 +29,14 @@
           <%= link_to extension.title, extension.source_url, target: '_blank' %>
           </h2>
           <div class="types">
-            <% extension.types.each do |type| %>
-              <span class="type"><%= type.name %></span>
+            <% extension.types.most_used.each do |type| %>
+              <span class="type <%= type.name.to_s %>"><%= type.name %></span>
             <% end %>
           </div>
         </div>
         <%= raw extension.body %>
         <p>
-          <em><%= t('.works_with_refinery_cms', versions: extension.versions.to_sentence) %></em>
+          <em><%= t('.works_with_refinery_cms', versions: extension.versions.order('name DESC').to_sentence) %></em>
         </p>
       </li>
     <% end %>

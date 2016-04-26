@@ -3,7 +3,9 @@
     <%= extension.title %>
   </span>
 
-  <span class='preview'></span>
+  <span class='preview'>
+    <%= extension.types.most_used.to_sentence %>
+  </span>
 
   <span class='actions'>
     <%= action_icon(:edit,    refinery.edit_extensions_admin_extension_path(extension), t('.edit') ) %>

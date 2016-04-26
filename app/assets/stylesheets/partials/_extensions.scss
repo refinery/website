@@ -70,13 +70,23 @@
           .type {
             background-color: #c9c9c9;
             border-radius: 0.5em;
-            color: #404040;
+            color: black;
             display: inline-block;
             font-size: 0.75em;
             font-style: italic;
             padding: 0.2em 0.3em;
             margin-right: 0.25em;
             vertical-align: super;
+
+            &.official {
+              background-color: #1B70CE;
+              color: #fff;
+            }
+
+            &.community {
+              background-color: #C83F00;
+              color: #fff;
+            }
           }
         }
 
