@@ -98,3 +98,4 @@ vendor/extensions/**/spec/dummy
 .gems
 .rbenv-gemsets
 .ruby-version
+*.dump
