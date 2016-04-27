@@ -4,6 +4,7 @@ module Refinery
       class ExtensionsController < ::Refinery::AdminController
 
         crudify :'refinery/extensions/extension',
+                paging: false,
                 order: :position
 
         private
