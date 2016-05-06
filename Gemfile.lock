@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/bisscomm/refinerycms-teams
-  revision: e0324febbfd34144634bc3267757c0cf1e1fc71a
+  revision: 3125a718585d6cd7bb30bf82c0bab7dad3e324bd
   branch: master
   specs:
     refinerycms-teams (3.0.0)
