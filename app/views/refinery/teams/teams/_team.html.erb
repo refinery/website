@@ -1,0 +1,5 @@
+<li class="vcard">
+  <h4 class"fn"><%= team.fullname %></h4>
+  <%= image_tag team.photo.url, alt: team.title, class: 'photo' if team.photo %>
+  <div class"note"><%= raw team.body %></div>
+</li>
