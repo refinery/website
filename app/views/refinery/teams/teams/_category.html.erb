@@ -1,0 +1,6 @@
+<li class="<%= category.slug %>">
+  <h2><%= category.title %></h2>
+  <ul>
+    <%= render partial: "team", collection: category.teams %>
+  </ul>
+</li>

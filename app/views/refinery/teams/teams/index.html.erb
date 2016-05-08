@@ -1,0 +1,18 @@
+<% content_for :body do %>
+  <section class="hr">
+    <%=raw @page.content_for(Refinery::Pages.default_parts.first[:slug].to_sym) %>
+  </section>
+
+  <% if @team_categories.any? %>
+    <section>
+      <h1><%= t('title', scope: 'refinery.plugins.refinery_teams') %></h1>
+      <ul id="team-categories">
+        <%= render partial: "category", collection: @team_categories %>
+      </ul>
+    </section>
+  <% else %>
+    <%= t('.no_items_yet') %>
+  <% end %>
+<% end %>
+
+<%= render '/refinery/content_page' %>
