@@ -1,0 +1,27 @@
+<header id="header" role="banenr">
+  <div class="wrapper">
+    <div id="logo" rel="home">
+      <%= link_to refinery.root_path do %>
+        <%= image_tag 'refinery-cms-logo.png' , alt: Refinery::Core.site_name %>
+      <% end %>
+    </div>
+
+    <div id="main-menu">
+      <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
+    </div>
+
+    <div id="user-menu">
+      <ul>
+        <li>
+          <a href="#">Community</a>
+        </li>
+        <li>
+          <a href="#">Demo</a>
+        </li>
+        <li>
+          <a href="#">Get started</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>

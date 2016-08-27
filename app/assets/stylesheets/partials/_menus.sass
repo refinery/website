@@ -1,0 +1,82 @@
+#main-menu nav,
+#user-menu
+  li
+    @include transition(background-color 0.2s ease-in-out 0s)
+
+    > ul
+      @include transition(opacity 0.1s ease-in-out 0s)
+  a
+    @include transition(all 0.2s ease-in-out 0s)
+
+  > ul
+    margin: 0
+    padding: 0
+    @include clearfix
+
+    > li
+      display: block
+      display: inline-block
+      position: relative
+
+      > a
+        color: $menu_color
+        display: block
+        font-size: em(14)
+        padding: em(25) em(20)
+        text-transform: uppercase
+        text-decoration: none
+
+      > ul
+        background-color: darken( $header_backgound_color, 10% )
+        left: 0
+        min-width: em(170)
+        opacity: 0
+        padding: em(10) em(20) em(10)
+        position: absolute
+
+        > li
+          display: block
+
+          > a
+            color: darken( $menu_color, 10% )
+            display: block
+            font-size: 1em
+            padding: em(5) 0
+            text-decoration: none
+
+          &:hover,
+          &.selected
+            > a
+              color: $menu_color
+
+
+      &:hover,
+      &.selected
+        background-color: darken( $header_backgound_color, 10% )
+        > a
+          color: $menu_color
+
+        > ul
+          opacity: 1
+
+#user-menu
+  > ul
+    > li
+      > a
+        font-size: em(15)
+        padding: em(23) em(10)
+        text-transform: capitalize
+
+      &:last-child
+        background: none
+
+        a
+          background-color: $secondary_color
+          border-radius: 3px
+          margin-left: em(10)
+          padding: em(12) em(22)
+
+        &:hover,
+        &.selected
+          a
+            background-color: darken( $secondary_color, 10% )
