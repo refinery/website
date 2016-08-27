@@ -131,6 +131,13 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bitters (1.2.0)
+      bourbon (>= 4.2)
+      sass (>= 3.4)
+      thor
+    bourbon (4.2.7)
+      sass (~> 3.4)
+      thor (~> 0.19)
     builder (3.2.2)
     byebug (8.2.5)
     chronic (0.10.2)
@@ -253,10 +260,15 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
+    mmenu-rails (5.5.3)
     multi_json (1.12.0)
+    neat (1.8.0)
+      sass (>= 3.3)
+      thor (~> 0.19)
     nenv (0.3.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    normalize-rails (4.1.1)
     notiffany (0.0.8)
       nenv (~> 0.1)
       shellany (~> 0.0)
@@ -399,6 +411,8 @@ PLATFORMS
 
 DEPENDENCIES
   actionpack-page_caching
+  bitters
+  bourbon (~> 4.2)
   byebug
   coffee-rails (~> 4.1.0)
   dalli
@@ -413,6 +427,9 @@ DEPENDENCIES
   kgio
   letter_opener
   memcachier
+  mmenu-rails
+  neat
+  normalize-rails
   pg
   puma (>= 3.1.0)
   quiet_assets

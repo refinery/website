@@ -19,6 +19,16 @@ gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+gem 'normalize-rails'
+
+# For mobile menu, mmenu must be 5.5.3 or lower
+gem 'mmenu-rails'
+
+# Neat bourbon RWD Framework
+gem 'neat'
+gem 'bourbon', '~> 4.2'
+gem 'bitters'
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
