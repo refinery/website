@@ -99,6 +99,8 @@ gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 # The default authentication adapter
 gem 'refinerycms-authentication-devise', '~> 1.0'
 
+gem 'refinerycms-copywriting', git: 'https://github.com/unixcharles/refinerycms-copywriting', branch: 'master'
+
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 gem 'refinerycms-teams', git: 'https://github.com/bisscomm/refinerycms-teams', branch: 'master'
 

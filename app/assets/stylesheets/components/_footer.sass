@@ -1,0 +1,42 @@
+#footer
+  background-color: $footer_backgound_color
+  color: $footer_link_color
+
+  .wrapper
+    &.nopad
+      border-top: 1px solid lighten($body_background_color, 10%)
+    &:nth-child(1)
+      border: none
+
+  #footer-menu
+    padding: em(28) 0
+
+  .socials
+    padding: em(28) 0
+
+    ul
+      margin: 0
+      padding: 0
+      li
+        display: inline-block
+        margin-right: em(6)
+
+        a
+          display: block
+          background-color: $footer_link_color
+          border-radius: 50%
+          height: em(18)
+          width: em(18)
+
+        &:hover,
+        &:visited
+          a
+            background-color: white
+
+  .legals
+    font-size: 1em
+    padding: em(10) 0 em(28)
+
+    @include media($desktop)
+      text-align: right
+      padding: em(28) 0

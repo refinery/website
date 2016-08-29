@@ -6,22 +6,30 @@
       <% end %>
     </div>
 
-    <div id="main-menu">
-      <%= Refinery::Pages::MenuPresenter.new(refinery_menu_pages, self).to_html %>
-    </div>
+    <div id="menus">
+      <div id="main-menu">
+        <%= main_menu.to_html %>
+      </div>
 
-    <div id="user-menu">
-      <ul>
-        <li>
-          <a href="#">Community</a>
-        </li>
-        <li>
-          <a href="#">Demo</a>
-        </li>
-        <li>
-          <a href="#">Get started</a>
-        </li>
-      </ul>
+      <div id="user-menu">
+        <ul>
+          <li>
+            <a href="#">Community</a>
+          </li>
+          <li>
+            <a href="#">Demo</a>
+          </li>
+          <li>
+            <a href="#">Get started</a>
+          </li>
+        </ul>
+      </div>
+
+      <%= link_to t('.menu'), '#mobile-menu', id: 'mobile-menu-link' %>
+
+      <nav id="mobile-menu" role="navigation">
+        <%= mobile_menu.to_html %>
+      </nav>
     </div>
   </div>
 </header>

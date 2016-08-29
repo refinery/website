@@ -1,4 +1,4 @@
-#main-menu nav,
+#main-menu div,
 #user-menu
   li
     @include transition(background-color 0.2s ease-in-out 0s)
@@ -80,3 +80,24 @@
         &.selected
           a
             background-color: darken( $secondary_color, 10% )
+
+#footer-menu
+  ul
+    margin: 0
+    padding: 0
+
+    li
+      display: inline-block
+      margin-right: em(18)
+
+      a
+        color: $footer_link_color
+        font-size: 1em
+        font-weight: bold
+        text-decoration: none
+        @include transition(all 0.2s ease-in-out 0s)
+
+      &:hover,
+      &:visited
+        a
+          color: white

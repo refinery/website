@@ -2,8 +2,22 @@
   header#header
     #logo
       @include span-columns(2)
-    #main-menu
-      @include span-columns(6)
 
-    #user-menu
-      @include span-columns(4)
+    #menus
+      @include span-columns(10)
+
+      #main-menu
+        float: left
+        display: block
+
+      #user-menu
+        float: right
+        display: block
+
+      #mobile-menu-link
+        display: none
+
+  footer#footer
+    .socials,
+    .legals
+      @include span-columns(6)

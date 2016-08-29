@@ -4,3 +4,18 @@
 
   &.nopad
     @include pad(0)
+
+header#header
+  #logo
+    @include span-columns(6)
+
+  #menus
+    @include span-columns(6)
+    @include clearfix
+
+    #main-menu,
+    #user-menu
+      display: none
+
+    #mobile-menu-link
+      float: right

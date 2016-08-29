@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160414025756) do
+ActiveRecord::Schema.define(version: 20160829022533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,6 +135,31 @@ ActiveRecord::Schema.define(version: 20160414025756) do
   add_index "refinery_blog_posts", ["access_count"], name: "index_refinery_blog_posts_on_access_count", using: :btree
   add_index "refinery_blog_posts", ["id"], name: "index_refinery_blog_posts_on_id", using: :btree
   add_index "refinery_blog_posts", ["slug"], name: "index_refinery_blog_posts_on_slug", using: :btree
+
+  create_table "refinery_copywriting_phrase_translations", force: :cascade do |t|
+    t.integer  "refinery_copywriting_phrase_id", null: false
+    t.string   "locale",                         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.text     "value"
+  end
+
+  add_index "refinery_copywriting_phrase_translations", ["locale"], name: "index_refinery_copywriting_phrase_translations_on_locale", using: :btree
+  add_index "refinery_copywriting_phrase_translations", ["refinery_copywriting_phrase_id"], name: "index_short_on_refinery_copywriting_phrase_id", using: :btree
+
+  create_table "refinery_copywriting_phrases", force: :cascade do |t|
+    t.string   "name"
+    t.text     "default"
+    t.text     "value"
+    t.string   "scope"
+    t.integer  "page_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "phrase_type"
+    t.date     "last_access_at"
+  end
+
+  add_index "refinery_copywriting_phrases", ["name", "scope"], name: "index_refinery_copywriting_phrases_on_name_and_scope", using: :btree
 
   create_table "refinery_extension_inquiries", force: :cascade do |t|
     t.string   "github_repo"

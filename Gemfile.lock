@@ -70,6 +70,16 @@ GIT
       refinerycms-settings (~> 3.0.0)
       seo_meta (~> 2.0.0.rc.1)
 
+GIT
+  remote: https://github.com/unixcharles/refinerycms-copywriting
+  revision: 7e9ef004b61cd15a11a173ded0e0be1532e12bfc
+  branch: master
+  specs:
+    refinerycms-copywriting (3.0.0)
+      decorators (~> 2.0.0)
+      globalize (~> 5.0)
+      refinerycms-core (~> 3.0.0)
+
 PATH
   remote: vendor/extensions
   specs:
@@ -443,6 +453,7 @@ DEPENDENCIES
   refinerycms-acts-as-indexed (~> 2.0, >= 2.0.0)
   refinerycms-authentication-devise (~> 1.0)
   refinerycms-blog!
+  refinerycms-copywriting!
   refinerycms-extensions!
   refinerycms-teams!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)

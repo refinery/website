@@ -1,16 +1,28 @@
 <footer id="footer" role="contentinfo">
   <div class="wrapper">
-
+    <div id="footer-menu" class="wrapper nopad">
+      <%= footer_menu.to_html %>
+    </div>
 
     <div class="wrapper nopad">
       <div class="socials">
-        twitter facebook github
+        <%= raw copywriting('slogan', { scope: 'socials' }) do %>
+          <ul>
+            <li>
+              <a href="https://github.com/refinery" target="_blank">
+                <span class="visuallyhidden">Github</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/refinerycms" target="_blank">
+                <span class="visuallyhidden">Twitter</span>
+              </a>
+            </li>
+          </ul>
+        <% end %>
       </div>
       <div class="legals">
-        <p>
-          <%= t('.copyright', :year => Time.now.year,
-                            :site_name => Refinery::Core.site_name) %>
-        </p>
+        <%= t('.copyright', year: Time.now.year, site_name: Refinery::Core.site_name) %>
       </div>
     </div>
   </div>

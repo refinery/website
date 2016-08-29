@@ -13,4 +13,16 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.mmenu
 //= require_tree .
+
+ready = function() {
+  $('#mobile-menu').mmenu({
+    offCanvas: {
+      position  : "right"
+    }
+  });
+};
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
