@@ -5,7 +5,7 @@ module ApplicationHelper
   end
 
   def mobile_menu
-    build_menu mobile_menu_records
+    build_menu mobile_menu_records, 3
   end
 
   def footer_menu

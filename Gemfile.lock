@@ -428,6 +428,7 @@ DEPENDENCIES
   dalli
   dragonfly-s3_data_store
   figaro
+  font-awesome-sass
   guard (>= 2.2.2)
   guard-livereload
   heroku-deflater

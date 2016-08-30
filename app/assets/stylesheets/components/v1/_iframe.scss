@@ -3,6 +3,12 @@ body.iframe {
   color: #c9c9c9;
   font-family: Verdana;
 
+  #page_container,
+  #page {
+    background: none;
+  }
+
+
   h1, .h1 {
     color: white;
     font-family: Georgia;

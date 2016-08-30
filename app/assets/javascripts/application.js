@@ -13,14 +13,18 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require jquery.mmenu
+//= require jquery.mmenu.all
 //= require_tree .
 
 ready = function() {
   $('#mobile-menu').mmenu({
+    "slidingSubmenus": false,
     offCanvas: {
       position  : "right"
-    }
+    },
+    "extensions": [
+      "pagedim-black"
+    ]
   });
 };
 

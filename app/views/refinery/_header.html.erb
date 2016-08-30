@@ -25,7 +25,12 @@
         </ul>
       </div>
 
-      <%= link_to t('.menu'), '#mobile-menu', id: 'mobile-menu-link' %>
+      <%= link_to '#mobile-menu', id: 'mobile-menu-link' do %>
+        <span class="top-bar"></span>
+        <span class="middle-bar"></span>
+        <span class="bottom-bar"></span>
+        <em class="visuallyhidden"><%= t('.menu') %></em>
+      <% end %>
 
       <nav id="mobile-menu" role="navigation">
         <%= mobile_menu.to_html %>

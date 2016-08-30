@@ -50,8 +50,7 @@
               color: $menu_color
 
 
-      &:hover,
-      &.selected
+      &:hover
         background-color: darken( $header_backgound_color, 10% )
         > a
           color: $menu_color
@@ -80,6 +79,42 @@
         &.selected
           a
             background-color: darken( $secondary_color, 10% )
+
+
+#mobile-menu-link
+  border: 1px solid white
+  display: block
+  width: em(45)
+  padding: em(5) em(10)
+  overflow: hidden
+
+  span
+    background: white
+    display: block
+    height: em(3)
+    margin: em(4) 0
+    position: relative
+    transform: rotate( 0 )
+    top: 0
+    left: 0
+    opacity: 1
+    transition: none 0.5s ease
+    transition-property: transform, top, right, opacity
+
+html.mm-opened
+  #mobile-menu-link
+    span.top-bar
+      transform: rotate( 45deg )
+      top: em(7)
+
+    span.middle-bar
+      left: em(-40)
+      opacity: 0
+
+    span.bottom-bar
+      transform: rotate( -45deg )
+      top: em(-7)
+
 
 #footer-menu
   ul

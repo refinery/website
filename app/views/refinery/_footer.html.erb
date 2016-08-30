@@ -6,19 +6,18 @@
 
     <div class="wrapper nopad">
       <div class="socials">
-        <%= raw copywriting('slogan', { scope: 'socials' }) do %>
+        <%= raw copywriting('slogan', { scope: 'socials', phrase_type: 'wysiwyg' }) do %>
           <ul>
-            <li>
-              <a href="https://github.com/refinery" target="_blank">
-                <span class="visuallyhidden">Github</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/refinerycms" target="_blank">
-                <span class="visuallyhidden">Twitter</span>
-              </a>
-            </li>
-          </ul>
+          <li>
+            <a class="twitter" href="https://twitter.com/refinerycms" target="_blank">
+              <span class="fa-stack">
+                <em class="fa fa-circle fa-stack-2x"></em>
+                <em class="fa fa-twitter fa-stack-1x fa-inverse"></em>
+              </span>
+              <span class="visuallyhidden">Twitter</span>
+            </a>
+          </li>
+        </ul>
         <% end %>
       </div>
       <div class="legals">

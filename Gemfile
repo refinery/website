@@ -24,6 +24,8 @@ gem 'normalize-rails'
 # For mobile menu, mmenu must be 5.5.3 or lower
 gem 'mmenu-rails'
 
+gem 'font-awesome-sass'
+
 # Neat bourbon RWD Framework
 gem 'neat'
 gem 'bourbon', '~> 4.2'

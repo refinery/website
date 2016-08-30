@@ -12,7 +12,7 @@
     padding: em(28) 0
 
   .socials
-    padding: em(28) 0
+    padding: em(24) 0
 
     ul
       margin: 0
@@ -23,15 +23,16 @@
 
         a
           display: block
-          background-color: $footer_link_color
-          border-radius: 50%
-          height: em(18)
-          width: em(18)
+          color: $footer_link_color
+          @include transition(color 0.2s ease-in-out 0s)
+
+          .fa-inverse
+            color: $footer_backgound_color
 
         &:hover,
         &:visited
           a
-            background-color: white
+            color: white
 
   .legals
     font-size: 1em
