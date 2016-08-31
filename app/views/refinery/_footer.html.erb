@@ -1,27 +1,31 @@
-<footer id="footer" role="contentinfo">
-  <div class="wrapper">
-    <div id="footer-menu" class="wrapper nopad">
-      <%= footer_menu.to_html %>
-    </div>
+<footer role="contentinfo">
+  <%= render partial: "/refinery/shared/newsletter_sign_up_form" %>
 
-    <div class="wrapper nopad">
-      <div class="socials">
-        <%= raw copywriting('slogan', { scope: 'socials', phrase_type: 'wysiwyg' }) do %>
-          <ul>
-          <li>
-            <a class="twitter" href="https://twitter.com/refinerycms" target="_blank">
-              <span class="fa-stack">
-                <em class="fa fa-circle fa-stack-2x"></em>
-                <em class="fa fa-twitter fa-stack-1x fa-inverse"></em>
-              </span>
-              <span class="visuallyhidden">Twitter</span>
-            </a>
-          </li>
-        </ul>
-        <% end %>
+  <div id="footer">
+    <div class="wrapper">
+      <div id="footer-menu" class="wrapper nopad">
+        <%= footer_menu.to_html %>
       </div>
-      <div class="legals">
-        <%= t('.copyright', year: Time.now.year, site_name: Refinery::Core.site_name) %>
+
+      <div class="wrapper nopad">
+        <div class="socials">
+          <%= raw copywriting('slogan', { scope: 'socials', phrase_type: 'wysiwyg' }) do %>
+            <ul>
+            <li>
+              <a class="twitter" href="https://twitter.com/refinerycms" target="_blank">
+                <span class="fa-stack">
+                  <em class="fa fa-circle fa-stack-2x"></em>
+                  <em class="fa fa-twitter fa-stack-1x fa-inverse"></em>
+                </span>
+                <span class="visuallyhidden">Twitter</span>
+              </a>
+            </li>
+          </ul>
+          <% end %>
+        </div>
+        <div class="legals">
+          <%= t('.copyright', year: Time.now.year, site_name: Refinery::Core.site_name) %>
+        </div>
       </div>
     </div>
   </div>

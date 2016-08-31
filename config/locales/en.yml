@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+
+  refinery:
+    shared:
+      newsletter_sign_up_form:
+        title: Get updates in your mailbox!
