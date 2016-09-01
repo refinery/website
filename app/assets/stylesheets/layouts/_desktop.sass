@@ -28,3 +28,11 @@
       .socials,
       .legals
         @include span-columns(6)
+
+  #page
+    #key_features
+      ul
+        @include outer-container
+        li
+          @include span-columns(4)
+          @include omega(3n)
