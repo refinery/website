@@ -1,3 +1,29 @@
 form
-  input[type="email"]
-    border: 1px solid $grey_color
+  display: flex
+
+  input
+    &[type="email"]
+      border: 1px solid $grey_color
+      border-right: none
+      border-radius: 3px
+      border-top-right-radius: 0
+      border-bottom-right-radius: 0
+      padding: em(15)
+      font-size: em(18)
+      width: 100%
+
+    &[type="submit"]
+      background-color: $secondary_color
+      border: none
+      border-radius: 3px
+      border-top-left-radius: 0
+      border-bottom-left-radius: 0
+      color: white
+      cursor: pointer
+      font-size: em(18)
+      float: left
+      padding: em(15) em(30)
+      @include transition(background-color 0.1s ease-in-out 0s)
+
+      &:hover
+        background-color: darken($secondary_color, 10%)
