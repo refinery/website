@@ -1,0 +1,7 @@
+<% content_for :key_features do %>
+  <div class="wrapper">
+    <%= raw @page.content_for(:key_features) %>
+  </div>
+<% end %>
+
+<%= render 'refinery/content_page', hide_sections: [:body_content_title] %>
