@@ -4,7 +4,9 @@
   <div id="footer">
     <div class="wrapper">
       <div id="footer-menu" class="wrapper nopad">
-        <%= footer_menu.to_html %>
+        <% cache(cache_key_for_menu("footer_menu", @page)) do %>
+          <%= menu("footer_menu", 0).to_html %>
+        <% end %>
       </div>
 
       <div class="wrapper nopad">

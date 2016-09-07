@@ -1,29 +1,42 @@
 module ApplicationHelper
-
-  def main_menu
-    build_menu main_menu_records, 1
+   def menu(position, max_depth = 0)
+    build_menu(menu_records(position), max_depth)
   end
 
-  def mobile_menu
-    build_menu mobile_menu_records, 3
-  end
-
-  def footer_menu
-    build_menu footer_menu_records
+  def cache_key_for_menu(position, page = nil)
+    records = menu_records(position)
+    count = records.count
+    max_updated_at = (records.maximum(:updated_at) || Date.today).to_s(:number)
+    common_cache_keys(page, position, max_updated_at, count)
   end
 
   protected
 
-  def main_menu_records
-    Refinery::Page.with_translations(I18n.locale).fast_menu.sort_by(&:lft)
+  def menu_records(position, max_depth = 0)
+    query = Refinery::Page
+
+    if Refinery::I18n.frontend_locales.many?
+      query = query.with_translations(I18n.locale)
+    end
+
+    if position != "mobile_menu"
+      query = eval("query.#{position}_pages")
+    else
+      query = query.fast_menu
+    end
+
+    if max_depth > 0
+      query = query.includes(:children)
+    end
+
+    query = query.order(:lft)
+    query
   end
 
-  def mobile_menu_records
-    Refinery::Page.with_translations(I18n.locale).fast_menu.sort_by(&:lft)
-  end
+  private
 
-  def footer_menu_records
-    Refinery::Page.with_translations(I18n.locale).fast_menu.sort_by(&:lft)
+  def common_cache_keys(page, position, max_updated_at, count)
+    "#{I18n.locale}/refinery/#{position}/#{page.id}-#{max_updated_at}-#{count}"
   end
 
   def build_menu(pages, max_depth = 0)

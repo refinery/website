@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160829022533) do
+ActiveRecord::Schema.define(version: 20160907041802) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -249,12 +249,12 @@ ActiveRecord::Schema.define(version: 20160829022533) do
     t.string   "path"
     t.string   "slug"
     t.string   "custom_slug"
-    t.boolean  "show_in_menu",        default: true
+    t.boolean  "show_in_menu",           default: true
     t.string   "link_url"
     t.string   "menu_match"
-    t.boolean  "deletable",           default: true
-    t.boolean  "draft",               default: false
-    t.boolean  "skip_to_first_child", default: false
+    t.boolean  "deletable",              default: true
+    t.boolean  "draft",                  default: false
+    t.boolean  "skip_to_first_child",    default: false
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
@@ -262,6 +262,9 @@ ActiveRecord::Schema.define(version: 20160829022533) do
     t.string   "layout_template"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "show_in_footer_menu",    default: false
+    t.boolean  "show_in_marketing_menu", default: false
+    t.boolean  "show_in_main_menu",      default: false
   end
 
   add_index "refinery_pages", ["depth"], name: "index_refinery_pages_on_depth", using: :btree

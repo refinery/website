@@ -8,21 +8,15 @@
 
     <div id="menus">
       <div id="main-menu">
-        <%= main_menu.to_html %>
+        <% cache(cache_key_for_menu("main_menu", @page)) do %>
+          <%= menu("main_menu", 1).to_html %>
+        <% end %>
       </div>
 
-      <div id="user-menu">
-        <ul>
-          <li>
-            <a href="#">Demo</a>
-          </li>
-          <li>
-            <a href="#">Guides</a>
-          </li>
-          <li>
-            <a href="#">Get started</a>
-          </li>
-        </ul>
+      <div id="marketing-menu">
+        <% cache(cache_key_for_menu("marketing_menu", @page)) do %>
+          <%= menu("marketing_menu", 0).to_html %>
+        <% end %>
       </div>
 
       <%= link_to '#mobile-menu', id: 'mobile-menu-link' do %>
@@ -33,7 +27,9 @@
       <% end %>
 
       <nav id="mobile-menu" role="navigation">
-        <%= mobile_menu.to_html %>
+        <% cache(cache_key_for_menu("mobile_menu", @page)) do %>
+          <%= menu("mobile_menu", 3).to_html %>
+        <% end %>
       </nav>
     </div>
   </div>
