@@ -1,7 +1,24 @@
 body
   background-color: $body_background_color
   font-family: $primary_font
+  color: $dark_color
 
   #page_container,
   #page
     background-color: $main_background_color
+
+  #page_container
+    #page
+      section
+        margin-bottom: em(90)
+
+        &#body_content
+          margin-bottom: 0
+
+    p
+      a
+        color: $secondary_color
+        @include transition(color 0.2s ease-in-out 0s)
+
+        &:hover
+          color: darken( $secondary_color, 10% )

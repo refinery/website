@@ -1,5 +1,5 @@
 #main-menu div,
-#user-menu
+#marketing-menu div
   li
     @include transition(background-color 0.2s ease-in-out 0s)
 
@@ -30,7 +30,7 @@
         background-color: darken( $header_backgound_color, 10% )
         left: 0
         min-width: em(170)
-        opacity: 0
+        display: none
         padding: em(10) em(20) em(10)
         position: absolute
 
@@ -56,7 +56,7 @@
           color: $menu_color
 
         > ul
-          opacity: 1
+          display: block
 
       &.active,
       &.selected
@@ -64,27 +64,28 @@
         > a
           color: $menu_color
 
-#user-menu
-  > ul
-    > li
-      > a
-        font-size: em(15)
-        padding: em(23) em(10)
-        text-transform: capitalize
+#marketing-menu
+  > div
+    > ul
+      > li
+        > a
+          font-size: em(15)
+          padding: em(23) em(10)
+          text-transform: capitalize
 
-      &:last-child
-        background: none
+        &:last-child
+          background: none
 
-        a
-          background-color: $secondary_color
-          border-radius: 3px
-          margin-left: em(10)
-          padding: em(12) em(22)
-
-        &:hover,
-        &.selected
           a
-            background-color: darken( $secondary_color, 10% )
+            background-color: $secondary_color
+            border-radius: 3px
+            margin-left: em(10)
+            padding: em(12) em(22)
+
+          &:hover,
+          &.selected
+            a
+              background-color: darken( $secondary_color, 10% )
 
 
 #mobile-menu-link
