@@ -26,6 +26,17 @@ ready = function() {
       "pagedim-black"
     ]
   });
+
+  $(window).resize(function() {
+    clearTimeout(timeToWait_mmenu);
+    timeToWait_mmenu = setTimeout($.fn.closeMmenu, 50);
+  });
+};
+
+$.fn.closeMmenu = function(){
+  if($('#mobile-menu').hasClass('mm-opened')){
+    $('#mobile-menu').data( "mmenu" ).close();
+  }
 };
 
 $(document).ready(ready);
