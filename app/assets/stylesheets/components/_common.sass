@@ -16,9 +16,26 @@ body
           margin-bottom: 0
 
     p
+      line-height: em(20)
+
       a
         color: $secondary_color
         @include transition(color 0.2s ease-in-out 0s)
 
         &:hover
           color: darken( $secondary_color, 10% )
+
+        &.button
+          background-color: $secondary_color
+          border: none
+          border-radius: 3px
+          color: white
+          cursor: pointer
+          display: inline-block
+          font-size: em(18)
+          padding: em(15) em(30)
+          text-decoration: none
+          @include transition(background-color 0.1s ease-in-out 0s)
+
+          &:hover
+            background-color: darken($secondary_color, 10%)

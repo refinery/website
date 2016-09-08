@@ -64,6 +64,7 @@
         > a
           color: $menu_color
 
+
 #marketing-menu
   > div
     > ul
@@ -86,6 +87,33 @@
           &.selected
             a
               background-color: darken( $secondary_color, 10% )
+
+
+body#home-page
+  #main-menu div,
+  #marketing-menu div
+    > ul
+      > li
+        > a
+          color: $dark_color
+
+        > ul
+          background-color: $dark_color
+
+        &:hover
+          background-color: $dark_color
+          > a
+            color: $menu_color
+
+  #marketing-menu div
+    > ul
+      > li
+        &:last-child
+          background: none
+
+          a
+            background-color: $dark_color
+            color: white
 
 
 #mobile-menu-link
