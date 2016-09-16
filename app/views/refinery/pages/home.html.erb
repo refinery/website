@@ -1,3 +1,7 @@
+<% content_for :introduction do %>
+  <%= raw @page.content_for(:introduction) % @project_infos %>
+<% end %>
+
 <% content_for :key_features do %>
   <div class="inner-wrapper">
     <%= raw @page.content_for(:key_features) %>

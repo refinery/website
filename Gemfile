@@ -107,3 +107,6 @@ gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', bra
 gem 'refinerycms-teams', git: 'https://github.com/bisscomm/refinerycms-teams', branch: 'master'
 
 gem 'refinerycms-extensions', path: 'vendor/extensions'
+
+gem "gems"
+gem "github_api"
