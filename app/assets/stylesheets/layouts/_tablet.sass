@@ -1,0 +1,37 @@
+@include media($tablet)
+  header#header
+    #logo
+      @include span-columns(2)
+
+    #menus
+      @include span-columns(10)
+
+      #main-menu
+        float: left
+        display: block
+
+      #marketing-menu
+        float: right
+        display: block
+
+      #mobile-menu-link
+        display: none
+
+
+  #page
+    #key_features
+      .inner-wrapper
+        @include shift(1)
+        @include span-columns(10)
+
+        ul
+          @include outer-container
+          li
+            @include span-columns(4)
+            @include omega(3n)
+
+  footer
+    #footer
+      .socials,
+      .legals
+        @include span-columns(6)

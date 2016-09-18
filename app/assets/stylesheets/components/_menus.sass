@@ -4,7 +4,7 @@
     @include transition(background-color 0.2s ease-in-out 0s)
 
     > ul
-      @include transition(opacity 0.1s ease-in-out 0s)
+      @include transition(opacity 0.2s ease-in-out 0s)
   a
     @include transition(all 0.2s ease-in-out 0s)
 
@@ -30,9 +30,10 @@
         background-color: darken( $header_backgound_color, 10% )
         left: 0
         min-width: em(170)
-        display: none
         padding: em(10) em(20) em(10)
+        opacity: 0
         position: absolute
+        visibility: hidden
 
         > li
           display: block
@@ -50,13 +51,28 @@
             > a
               color: $menu_color
 
+      &.has-children
+        > a
+          &:after
+            content: "\f107"
+            display: inline-block
+            font: $font_awesome
+            margin-left: 0.5em
+            @include transition(transform 0.2s ease-in-out 0s)
+
       &:hover
         background-color: darken( $header_backgound_color, 10% )
         > a
           color: $menu_color
 
         > ul
-          display: block
+          visibility: visible
+          opacity: 1
+
+        &.has-children
+          > a
+            &:after
+              transform: rotate(180deg)
 
       &.active,
       &.selected
@@ -74,6 +90,14 @@
           padding: em(23) em(10)
           text-transform: capitalize
 
+        &:first-child
+          a
+            &:after
+              content: "\f08e"
+              font: $font_awesome
+              font-size: 0.7em
+              padding-left: 0.5em
+
         &:last-child
           background: none
 
@@ -87,33 +111,6 @@
           &.selected
             a
               background-color: darken( $secondary_color, 10% )
-
-
-body#home-page
-  #main-menu div,
-  #marketing-menu div
-    > ul
-      > li
-        > a
-          color: $dark_color
-
-        > ul
-          background-color: $dark_color
-
-        &:hover
-          background-color: $dark_color
-          > a
-            color: $menu_color
-
-  #marketing-menu div
-    > ul
-      > li
-        &:last-child
-          background: none
-
-          a
-            background-color: $dark_color
-            color: white
 
 
 #mobile-menu-link
@@ -149,6 +146,39 @@ html.mm-opened
     span.bottom-bar
       transform: rotate( -45deg )
       top: em(-7)
+
+
+body#home-page
+  #main-menu div,
+  #marketing-menu div
+    > ul
+      > li
+        > a
+          color: $dark_color
+
+        > ul
+          background-color: $dark_color
+
+        &:hover
+          background-color: $dark_color
+          > a
+            color: $menu_color
+
+  #marketing-menu div
+    > ul
+      > li
+        &:last-child
+          background: none
+
+          a
+            background-color: $dark_color
+            color: white
+
+  #mobile-menu-link
+    border-color: $dark_color
+
+    span
+      background: $dark_color
 
 
 #footer-menu

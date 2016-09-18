@@ -18,7 +18,6 @@ module RefineryPagesControllerDecoratoration
       gem_downloads: number_with_delimiter(gem["downloads"], :delimiter => ','),
       gem_version: gem["version"],
       github_watchers: number_with_delimiter(github_repos_infos.watchers_count, :delimiter => ','),
-      github_contributors: 378,
       latest_commit_date: distance_of_time_in_words(Time.now.utc - Time.parse(github_repos_latest_commit.commit.author.date).utc),
       latest_commit_author: github_repos_latest_commit.commit.author.name
     }

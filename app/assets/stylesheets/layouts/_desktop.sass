@@ -1,42 +1,7 @@
 @include media($desktop)
-  header#header
-    #logo
-      @include span-columns(2)
-
-    #menus
-      @include span-columns(10)
-
-      #main-menu
-        float: left
-        display: block
-
-      #marketing-menu
-        float: right
-        display: block
-
-      #mobile-menu-link
-        display: none
-
   footer
     #newsletter_sign_up_form
       @include clearfix
       .wrapper
         @include shift(2)
         @include span-columns(8)
-
-    #footer
-      .socials,
-      .legals
-        @include span-columns(6)
-
-  #page
-    #key_features
-      .inner-wrapper
-        @include shift(1)
-        @include span-columns(10)
-
-        ul
-          @include outer-container
-          li
-            @include span-columns(4)
-            @include omega(3n)
