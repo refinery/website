@@ -1,6 +1,6 @@
 #newsletter_sign_up_form
   background-color: $newsletter_background_color
-  border-top: 1px solid lighten($grey_color, 10%)
+  border-top: 1px solid $light_grey_color
   padding: em(28) 0 em(38)
   margin-bottom: 0
 
@@ -13,3 +13,24 @@
     color: $dark_color
     font-size: em(24)
     font-weight: bold
+
+  form
+    input
+      &[type="email"]
+        margin-bottom: 1em
+
+    @include media($tablet)
+      display: flex
+      margin: 0 25%
+
+      input
+        &[type="email"]
+          border-top-right-radius: 0
+          border-bottom-right-radius: 0
+          border-right: none
+          margin-bottom: 0
+
+        &[type="submit"]
+          float: left
+          border-top-left-radius: 0
+          border-bottom-left-radius: 0
