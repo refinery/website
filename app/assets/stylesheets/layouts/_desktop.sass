@@ -1,1 +1,15 @@
 @include media($desktop)
+
+  #blog-page
+    #body_content
+      @include outer-container
+      @include pad(0 1em)
+
+      #body
+        @include span-columns(8)
+
+        .inner
+          @include pad(0)
+
+      #side_body
+        @include span-columns(4)
