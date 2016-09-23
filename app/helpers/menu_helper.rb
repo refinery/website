@@ -1,4 +1,4 @@
-module ApplicationHelper
+module MenuHelper
    def menu(position, max_depth = 0)
     build_menu(menu_records(position), max_depth)
   end
