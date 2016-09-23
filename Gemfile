@@ -108,9 +108,8 @@ gem 'refinerycms-teams', git: 'https://github.com/bisscomm/refinerycms-teams', b
 
 gem 'refinerycms-extensions', path: 'vendor/extensions'
 
-# Homepage
-gem "gems"
-gem "github_api"
+# Use Httparty for ProjectHelper
+gem 'httparty'
 
 # Extend Blog
 gem "readingtime"
