@@ -12,18 +12,35 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require jquery.mmenu.all
+//= require jquery.mmenu.min.all
+//= require wrappers/jquery.mmenu.turbolinks.min
 //= require_tree .
 
 ready = function() {
   $('#mobile-menu').mmenu({
-    "slidingSubmenus": false,
     offCanvas: {
       position  : "right"
     },
-    "extensions": [
-      "pagedim-black"
+    currentItem: true,
+    extensions  : [ 'effect-slide-menu', 'pageshadow' ],
+    counters  : true,
+    navbar    : {
+      title   : 'Menu'
+    },
+    navbars   : [
+      {
+        position  : 'top',
+        content   : [
+          'prev',
+          'title',
+          'close'
+        ]
+      }, {
+        position  : 'bottom',
+        content   : [
+          $('#footer').find('.socials').html()
+        ]
+      }
     ]
   });
 
@@ -41,3 +58,5 @@ $.fn.closeMmenu = function(){
 
 $(document).ready(ready);
 $(document).on('page:load', ready);
+
+//= require turbolinks
