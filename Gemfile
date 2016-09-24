@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
+ruby '2.3.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.6'
@@ -22,7 +22,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'normalize-rails'
 
 # For mobile menu, mmenu must be 5.5.3 or lower
-gem 'mmenu-rails'
+gem 'mmenu-rails', git: 'https://github.com/akosipc/mmenu-rails', branch: 'master'
 
 gem 'font-awesome-sass'
 
@@ -90,7 +90,7 @@ group :production do
 end
 
 
-gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: 'master'
+gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: '3-0-stable'
 
 # Add support for searching inside Refinery's admin interface.
 gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
