@@ -24,5 +24,11 @@ module RefineryWebsite
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # TODO: Disable when this website will be finished
+    config.action_dispatch.default_headers = {
+      'X-Frame-Options' => 'ALLOW-FROM http://www.refinerycms.com'
+    }
+
   end
 end
