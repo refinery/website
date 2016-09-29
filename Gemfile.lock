@@ -79,6 +79,16 @@ GIT
       seo_meta (~> 2.0.0.rc.1)
 
 GIT
+  remote: https://github.com/refinery/refinerycms-page-images
+  revision: ed35b79283ccb63090600902a841e6b5355efed6
+  branch: master
+  specs:
+    refinerycms-page-images (3.0.0)
+      decorators (~> 2.0.0)
+      globalize (~> 5.0)
+      refinerycms-pages (~> 3.0.0)
+
+GIT
   remote: https://github.com/unixcharles/refinerycms-copywriting
   revision: 7e9ef004b61cd15a11a173ded0e0be1532e12bfc
   branch: master
@@ -473,6 +483,7 @@ DEPENDENCIES
   refinerycms-blog!
   refinerycms-copywriting!
   refinerycms-extensions!
+  refinerycms-page-images (~> 3.0.0)!
   refinerycms-teams!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)

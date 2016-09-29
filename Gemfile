@@ -105,6 +105,7 @@ gem 'refinerycms-copywriting', git: 'https://github.com/unixcharles/refinerycms-
 
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 gem 'refinerycms-teams', git: 'https://github.com/bisscomm/refinerycms-teams', branch: 'master'
+gem 'refinerycms-page-images', '~> 3.0.0', git: "https://github.com/refinery/refinerycms-page-images", branch: "master"
 
 gem 'refinerycms-extensions', path: 'vendor/extensions'
 
