@@ -1,0 +1,65 @@
+#blog-page
+  #body_content
+    #body
+      h1
+        border-bottom: 1px solid $light_grey_color
+
+      article
+        header
+          a
+            color: $primary_color
+            text-decoration: none
+
+            &:hover
+              text-decoration: underline
+
+          .banner-image
+            display: block
+            overflow: hidden
+            padding-top: 40%
+            position: relative
+            width: 100%
+
+            img
+              position: absolute
+              top: 0
+              left: 0
+              width: 100%
+              @include transition(all 0.2s ease-in-out 0s)
+
+              &:hover
+                transform: scale(1.025)
+
+          .filled_in
+            font-size: em(12)
+            font-weight: bolder
+            margin-top: 1em
+
+          h2
+            font-size: em(20)
+            font-weight: bolder
+            margin: 0.5em 0
+
+            a
+              color: $dark_color
+              text-decoration: none
+
+              &:hover
+                text-decoration: underline
+
+          hr
+            border: none
+            border-bottom: 1px solid $light_grey_color
+
+          .details
+            color: $dark_grey_color
+            font-size: em(12)
+
+            .author,
+            .posted_at,
+            .tagged
+              display: inline-block
+
+
+    #side_body
+      border-left: 1px solid $light_grey_color
