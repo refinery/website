@@ -9,9 +9,9 @@
     <%= site_bar -%>
     <div id="page_container">
       <%= render "/refinery/header" -%>
-      <section id="page">
+      <main id="page" role="main">
         <%= yield %>
-      </section>
+      </main>
       <%= render "/refinery/footer" -%>
     </div>
   </body>
