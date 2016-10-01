@@ -17,7 +17,7 @@
 
       <h2><%= link_to post.title, refinery.blog_post_path(post) %></h2>
 
-      <section class='details'>
+      <div class='details'>
         <div class="author">
           <%= "#{t('by', :scope => 'refinery.blog.posts.show')} #{post.author.username}" if post.author.present? %>.
         </div>
@@ -32,19 +32,7 @@
             <%=raw tags.collect { |tag| link_to tag, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize) }.to_sentence %>
           </aside>
         <% end %>
-      </section>
+      </div>
     </header>
-    <footer>
-      <% if blog_post_teaser_enabled? && post.custom_teaser.present? %>
-        <p>
-          <%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) %>
-        </p>
-      <% end %>
-      <% if Refinery::Blog::Post.comments_allowed? %>
-        <aside class='comment_count'>
-          <%= link_to "#{t('title', :scope => 'refinery.blog.posts.show.comments')} (#{post.comments.approved.count})", refinery.blog_post_path(post) << '#comments' %>
-        </aside>
-      <% end %>
-    </footer>
   </article>
 <% end %>

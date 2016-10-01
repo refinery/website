@@ -41,12 +41,47 @@ body
             background-color: darken($secondary_color, 10%)
 
   a
-    .external
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+    &.external
       &:after
         content: "\f08e"
         font: $font_awesome
         font-size: 0.7em
         padding-left: 0.5em
 
+
   img
     max-width: 100%
+
+  .pagination
+    border-top: 1px solid $light_grey_color
+    color: $dark_color
+    font-size: em(16)
+    padding-top: 1em
+    text-align: center
+
+    a, em
+      padding: 1em 0.75em
+      display: inline-block
+
+    a
+      color: $dark_grey_color
+      text-decoration: none
+
+      &:hover
+        color: $dark_color
+        text-decoration: underline
+
+
+    .previous_page
+      float: left
+
+    .next_page
+      float: right
+
+    .disabled
+      display: none

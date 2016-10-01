@@ -30,6 +30,32 @@
             @include span-columns(4)
             @include omega(3n)
 
+
+  #blog-page
+    #body_content
+      @include outer-container
+      @include pad(0 1em)
+
+      #body
+        @include span-columns(8)
+
+        .latest-post
+          @include clearfix
+          article
+            @include span-columns(12)
+        .other-posts
+          @include clearfix
+          article
+            @include span-columns(6)
+            @include omega(2n)
+
+        .inner
+          @include pad(0)
+
+      #side_body
+        @include span-columns(4)
+
+
   footer
     #footer
       .socials,

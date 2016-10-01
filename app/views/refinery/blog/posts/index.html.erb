@@ -1,0 +1,30 @@
+<% content_for :body do %>
+  <%= raw @page.content_for(Refinery::Pages.default_parts.first[:slug].to_sym) if Refinery::Pages.default_parts.any? %>
+
+  <% if @posts.any? %>
+    <section id="blog_posts">
+      <% if @posts.current_page == 1 %>
+        <div class="latest-post">
+          <%= render :partial => "/refinery/blog/shared/post", :collection => @posts[0..0] %>
+        </div>
+        <div class="other-posts">
+          <%= render :partial => "/refinery/blog/shared/post", :collection => @posts[1..-1] %>
+        </div>
+      <% else %>
+        <div class="other-posts">
+          <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+        </div>
+      <% end %>
+      <%= will_paginate @posts %>
+    </section>
+  <% else %>
+    <p><%= t('.no_blog_articles_yet') %></p>
+  <% end %>
+<% end %>
+
+<% content_for :side_body_prepend do -%>
+  <%= raw @page.content_for(Refinery::Pages.default_parts.second[:slug].to_sym) %>
+<% end if Refinery::Pages.default_parts.many? -%>
+<%= render '/refinery/blog/shared/body_content_right' %>
+
+<%= render "/refinery/content_page" %>
