@@ -1,12 +1,10 @@
 <% if post.live? %>
   <article class="blog_post" id="<%= dom_id(post) %>">
     <header>
-       <% if post.images.any? %>
+      <% if post.images.any? %>
         <%= link_to refinery.blog_post_path(post), class: 'banner-image' do %>
           <%= image_tag post.images.first.thumbnail(geometry: "810x340").url, { alt: post.images.first.alt } %>
         <% end %>
-      <% else %>
-        <hr>
       <% end %>
 
       <% if (categories = post.categories.translated).any? %>

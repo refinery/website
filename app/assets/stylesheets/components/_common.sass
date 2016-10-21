@@ -1,25 +1,37 @@
 body
   background-color: $body_background_color
   font-family: $primary_font
-  color: $dark_color
+  color: $text_color
 
   #page_container,
   #page
     background-color: $main_background_color
 
-  #page_container
-    #page
-      section
-        margin-bottom: em(90)
+  main
+    section
+      margin-bottom: em(90)
 
-        &#body_content
-          margin-bottom: 0
+      &#body_content
+        margin-bottom: 0
 
-    p
+    h1, h2, h3, h4, h5, h6
+      color: $dark_color
+
+    h2
+      margin: 1.5em 0 1em
+
+    h3
+      margin: 1.5em 0 -0.25em
+
+
+    p,
+    ul li
       line-height: em(20)
 
       a
         color: $secondary_color
+        cursor: pointer
+        text-decoration: underline
         @include transition(color 0.2s ease-in-out 0s)
 
         &:hover
@@ -40,6 +52,12 @@ body
           &:hover
             background-color: darken($secondary_color, 10%)
 
+    ul
+      padding: 0
+      list-style-position: inside
+
+      li
+        margin: 0.9em 0
   a
     text-decoration: none
 

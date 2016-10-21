@@ -1,7 +1,26 @@
 #blog-page
-  #body_content
-    #body
-      h1
-        border-bottom: 1px solid $light_grey_color
+  #blog_post
+    margin-bottom: 3em
 
-    #side_body
+    h1
+      border-bottom: 1px solid $light_grey_color
+
+    .details
+      margin-bottom: 2em
+
+      a
+        color: $primary_color
+        text-decoration: none
+
+        &:hover
+          text-decoration: underline
+
+      div,
+      time,
+      aside
+        color: $dark_grey_color
+        display: inline-block
+        font-size: em(12)
+
+    .banner-image
+      margin-bottom: 3em

@@ -6,19 +6,25 @@
 <article id="blog_post">
   <header>
     <h1><%= @post.title %></h1>
-    <p><%= @post.body.reading_time format: :long %></p>
 
     <section class='details'>
+      <%= content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.username}.", :class => "blog_author") if @post.author.present? %>
+
       <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted_at'>
-        <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :short)) %>
+        <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :short)) %>.
       </time>
-      <%= content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.username}", :class => "blog_author") if @post.author.present? %>
+
+      <%= content_tag :div, class: "reading_time" do %>
+        <%= t('reading_time', scope: 'refinery.blog.posts.show', time: @post.body.reading_time(format: :long) ) %>.
+      <% end %>
+
       <% if @post.source_url.present? %>
         <div class='blog_source'>
           <%= "#{t('source', :scope => 'refinery.blog.posts.show')}: " %>
           <%= link_to (@post.source_url_title.blank? ? @post.source_url : @post.source_url_title), @post.source_url %>
         </div>
       <% end %>
+
       <% if (categories = @post.categories).any? %>
         <aside class='filled_in'>
           <%= t('filled_in', :scope => 'refinery.blog.posts.show') %>
@@ -28,7 +34,14 @@
         </aside>
       <% end %>
     </section>
+
+    <% if @post.images.any? %>
+      <%= content_tag :div, class: 'banner-image' do %>
+        <%= image_tag @post.images.first.thumbnail(geometry: "810x340").url, { alt: @post.images.first.alt } %>
+      <% end %>
+    <% end %>
   </header>
+
   <%= @post.body.html_safe %>
 
   <% if Refinery::Blog::Post::ShareThis.enabled? %>

@@ -26,3 +26,8 @@ en:
     shared:
       newsletter_sign_up_form:
         title: Subscribe to receive occasional updates
+
+    blog:
+      posts:
+        show:
+          reading_time: "%{time} read"
