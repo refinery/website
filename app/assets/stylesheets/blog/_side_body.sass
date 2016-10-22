@@ -1,58 +1,59 @@
-#side_body
-  a
-    color: $primary_color
-
-  @include media($tablet)
-    border-left: 1px solid $light_grey_color
-    padding-left: 1.5em
-
-  h2
-    border-top: 1px solid $light_grey_color
-    color: $dark_color
-    text-transform: uppercase
-    font-size: em(14)
-    margin: 0 0 0 -1.7em
-    padding: 2em 0 0 1.7em
-
-    &:first-of-type
-      border: none
-
-  ul
-    margin: 1em 0 3em 0
-    padding: 0 0 0 1.25em
-
-  #rss_feed_subscribe
-    display: block
-    margin: 1em 0 3em 0
-    padding: 0 0 0 1.25em
-    background: image_url('refinery/blog/rss-feed.png') no-repeat
-
-  #tags
-    margin: 1em 0 3em 0
+#blog-page
+  #side_body
     a
-      display: inline-block
-      margin-right: 0.5em
+      color: $primary_color
 
+    @include media($tablet)
+      border-left: 1px solid $light_grey_color
+      padding-left: 1.5em
 
-  #blog_posts
-    margin: 0.25em 0 2em
-    padding: 0
-
-    li
-      display: block
+    h2
       border-top: 1px solid $light_grey_color
+      color: $dark_color
+      text-transform: uppercase
+      font-size: em(14)
+      margin: 0 0 0 -1.7em
+      padding: 2em 0 0 1.7em
 
       &:first-of-type
         border: none
 
+    ul
+      margin: 1em 0 3em 0
+      padding: 0 0 0 1.25em
+
+    #rss_feed_subscribe
+      display: block
+      margin: 1em 0 3em 0
+      padding: 0 0 0 1.25em
+      background: image_url('refinery/blog/rss-feed.png') no-repeat
+
+    #tags
+      margin: 1em 0 3em 0
       a
-        color: $dark_color
+        display: inline-block
+        margin-right: 0.5em
+
+
+    #blog_posts
+      margin: 0.25em 0 2em
+      padding: 0
+
+      li
         display: block
-        font-weight: bold
-        padding: 1em 0
+        border-top: 1px solid $light_grey_color
+
+        &:first-of-type
+          border: none
+
+        a
+          color: $dark_color
+          display: block
+          font-weight: bold
+          padding: 1em 0
 
 
-  #blog_archive_widget
-    border-top: 1px solid $light_grey_color
-    margin: 0 0 0 -1.5em !important
-    padding: 0 0 0 1.5em
+    #blog_archive_widget
+      border-top: 1px solid $light_grey_color
+      margin: 0 0 0 -1.5em !important
+      padding: 0 0 0 1.5em
