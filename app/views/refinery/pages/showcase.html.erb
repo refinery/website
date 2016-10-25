@@ -2,21 +2,9 @@
 
   <%= raw @page.content_for(:body) %>
 
-  <% if @page.images_with_captions.any? %>
-    <div class="gallery">
-      <% @page.images_with_captions.each do |iwc| %>
-        <figure>
-          <%= link_to iwc.image.thumbnail(geometry: "900x600").url do %>
-            <%= image_tag(iwc.image.thumbnail(geometry: "435x535#nw").url) %>
-          <% end %>
-
-          <% if iwc.caption %>
-            <figcaption><%=raw iwc.caption %></figcaption>
-          <% end %>
-        </figure>
-      <% end %>
-    </div>
-  <% end %>
+  <%= render partial: "/refinery/shared/gallery",
+             locals: { images_with_captions: @page.images_with_captions }
+             if @page.images_with_captions.present? %>
 <% end %>
 
 <div class="wrapper">

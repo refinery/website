@@ -1,0 +1,13 @@
+<% if images_with_captions.any? %>
+  <div class="gallery">
+    <% images_with_captions.each do |iwc| %>
+      <figure>
+        <%= image_tag iwc.image.thumbnail(geometry: "435x535#nw").url, alt: iwc.image.alt %>
+
+        <% if iwc.caption %>
+          <figcaption><%=raw iwc.caption %></figcaption>
+        <% end %>
+      </figure>
+    <% end %>
+  </div>
+<% end %>
