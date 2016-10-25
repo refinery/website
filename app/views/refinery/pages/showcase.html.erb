@@ -3,8 +3,7 @@
   <%= raw @page.content_for(:body) %>
 
   <%= render partial: "/refinery/shared/gallery",
-             locals: { images_with_captions: @page.images_with_captions }
-             if @page.images_with_captions.present? %>
+             locals: { images_with_captions: @page.images_with_captions } if @page.images_with_captions.present? %>
 <% end %>
 
 <div class="wrapper template-showcase">
