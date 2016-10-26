@@ -1,0 +1,32 @@
+nb:
+  refinery:
+    plugins:
+      guides:
+        title: Guides
+    guides:
+      admin:
+        guides:
+          actions:
+            create_new: Lag en ny Guide
+            reorder: Endre rekkefølgen på Guides
+            reorder_done: Ferdig å endre rekkefølgen Guides
+          records:
+            title: Guides
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Guides enda. Klikk på "Lag en ny Guide" for å legge til din første guide.
+          guide:
+            view_live_html: Vis hvordan denne guide ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne guide
+            delete: Fjern denne guide permanent
+      guides:
+        show:
+          other: Andre Guides
+  activerecord:
+    attributes:
+      'refinery/guides/guide':
+        title: Title
+        description: Description
+        content: Content
+        author: Author
+        category: Category
+        source_url: Source Url

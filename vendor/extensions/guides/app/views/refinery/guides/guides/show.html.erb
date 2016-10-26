@@ -1,0 +1,63 @@
+<% content_for :body_content_title do %>
+  <%= @guide.title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Title</h1>
+    <p>
+      <%=raw @guide.title %>
+    </p>
+  </section>
+  <section>
+    <h1>Description</h1>
+    <p>
+      <%=raw @guide.description %>
+    </p>
+  </section>
+  <section>
+    <h1>Content</h1>
+    <p>
+      <%=raw @guide.html %>
+    </p>
+  </section>
+  <section>
+    <h1>Author</h1>
+    <p>
+      <%=raw @guide.author %>
+    </p>
+  </section>
+  <section>
+    <h1>Category</h1>
+    <p>
+      <%=raw @guide.category %>
+    </p>
+  </section>
+  <section>
+    <h1>SHA</h1>
+    <p>
+      <%=raw @guide.sha %>
+    </p>
+  </section>
+  <section>
+    <h1>Source Url</h1>
+    <p>
+      <%=raw @guide.source_url %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="guides">
+      <% @guides.each do |guide| %>
+        <li>
+          <%= link_to guide.title, refinery.guides_guide_path(guide) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

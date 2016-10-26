@@ -1,0 +1,7 @@
+<section id='records'>
+  <%= render 'records' %>
+</section>
+<aside id='actions'>
+  <%= render 'actions' %>
+</aside>
+<%= render '/refinery/admin/make_sortable', options: {tree: false} if !searching? and ::Refinery::Guides::Admin::GuidesController.sortable? and ::Refinery::Guides::Guide.many? %>

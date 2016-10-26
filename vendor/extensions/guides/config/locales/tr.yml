@@ -1,0 +1,32 @@
+tr:
+  refinery:
+    plugins:
+      guides:
+        title: Guides
+    guides:
+      admin:
+        guides:
+          actions:
+            create_new: Yeni Ekle Guide
+            reorder: Tekrar sirala Guides
+            reorder_done: Tekrar siralama tamamlandiGuides
+          records:
+            title: Guides
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Guides yok henuz.  Tikla "Yeni Ekle Guide" eklemek senin ilk guide.
+          guide:
+            view_live_html: Bunu canlu guide goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle guide
+            delete: Bunu Sil guide sonsuza dek
+      guides:
+        show:
+          other: Diger Guides
+  activerecord:
+    attributes:
+      'refinery/guides/guide':
+        title: Title
+        description: Description
+        content: Content
+        author: Author
+        category: Category
+        source_url: Source Url

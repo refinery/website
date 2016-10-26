@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="guides">
+    <% @guides.each do |guide| %>
+      <li>
+        <%= link_to guide.title, refinery.guides_guide_path(guide) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

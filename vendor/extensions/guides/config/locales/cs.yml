@@ -1,0 +1,32 @@
+cs:
+  refinery:
+    plugins:
+      guides:
+        title: Guides
+    guides:
+      admin:
+        guides:
+          actions:
+            create_new: Přidat Guide
+            reorder: Řadit Guides
+            reorder_done: Konec řazení Guides
+          records:
+            title: Guides
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Guides. Zvolte "Přidat Guide" pro přidání prvního guide.
+          guide:
+            view_live_html: Zobrazit náhled guide<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit guide
+            delete: Smazat guide
+      guides:
+        show:
+          other: Další Guides
+  activerecord:
+    attributes:
+      'refinery/guides/guide':
+        title: Title
+        description: Description
+        content: Content
+        author: Author
+        category: Category
+        source_url: Source Url

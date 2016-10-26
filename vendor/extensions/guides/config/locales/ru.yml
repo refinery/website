@@ -1,0 +1,32 @@
+ru:
+  refinery:
+    plugins:
+      guides:
+        title: Guides
+    guides:
+      admin:
+        guides:
+          actions:
+            create_new: Добавить Guide
+            reorder: Изменить порядок Guides
+            reorder_done: Закончить изменять порядок Guides
+          records:
+            title: Guides
+            sorry_no_results: "Извините, поиск не дал результатов."
+            no_items_yet: Записей "Guides" не найдено. Нажмите "Добавить Guide" чтобы создать guide.
+          guide:
+            view_live_html: Просмотреть guide вживую <br/><em>(в новом окне)</em>
+            edit: Редактировать guide
+            delete: Удалить guide навсегда
+      guides:
+        show:
+          other: Другие Guides
+  activerecord:
+    attributes:
+      'refinery/guides/guide':
+        title: Title
+        description: Description
+        content: Content
+        author: Author
+        category: Category
+        source_url: Source Url

@@ -105,6 +105,9 @@ PATH
       acts-as-taggable-on (~> 3.4)
       acts_as_indexed (~> 0.8.0)
       refinerycms-core (~> 3.0.2)
+    refinerycms-guides (1.0)
+      acts_as_indexed (~> 0.8.0)
+      refinerycms-core (~> 3.0.4)
 
 GEM
   remote: https://rubygems.org/
@@ -499,6 +502,7 @@ DEPENDENCIES
   refinerycms-blog!
   refinerycms-copywriting!
   refinerycms-extensions!
+  refinerycms-guides!
   refinerycms-page-images (~> 3.0.0)!
   refinerycms-teams!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)

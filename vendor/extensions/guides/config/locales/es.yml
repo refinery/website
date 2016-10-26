@@ -1,0 +1,33 @@
+es:
+  refinery:
+    plugins:
+      guides:
+        title: Guides
+#        article: masculino/femenino
+    guides:
+      admin:
+        guides:
+          actions:
+            create_new: Crear nuevo guide
+            reorder: Reordenar guides
+            reorder_done: Reordenación de guides completada
+          records:
+            title: Guides
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay guides todavía. Pulsa en "Crear nuevo Guide" para crear tu primer guide.
+          guide:
+            view_live_html: Ver este guide como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este guide
+            delete: Borrar este guide para siempre
+      guides:
+        show:
+          other: Otros guides
+  activerecord:
+    attributes:
+      'refinery/guides/guide':
+        title: Title
+        description: Description
+        content: Content
+        author: Author
+        category: Category
+        source_url: Source Url

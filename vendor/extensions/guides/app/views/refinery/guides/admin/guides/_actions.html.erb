@@ -1,0 +1,20 @@
+<ul>
+  <% if ::Refinery::Guides::Admin::GuidesController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.guides_admin_guides_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= action_label :add, refinery.new_guides_admin_guide_path, t('.create_new') %>
+  </li>
+<% if !searching? && ::Refinery::Guides::Admin::GuidesController.sortable? && ::Refinery::Guides::Guide.many? %>
+  <li>
+    <%= action_label :reorder,
+                     refinery.guides_admin_guides_path,
+                     t('.reorder', what:  "Guides"), id: 'reorder_action'%>
+    <%= action_label :reorder_done,
+                     refinery.guides_admin_guides_path,
+                      t('.reorder_done', what: "Guides"), id: 'reorder_action_done', class: 'hidden'%>
+  </li>
+<% end %>
+</ul>

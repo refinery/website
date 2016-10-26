@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160929032360) do
+ActiveRecord::Schema.define(version: 20161026012607) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -161,21 +161,26 @@ ActiveRecord::Schema.define(version: 20160929032360) do
 
   add_index "refinery_copywriting_phrases", ["name", "scope"], name: "index_refinery_copywriting_phrases_on_name_and_scope", using: :btree
 
-  create_table "refinery_extension_inquiries", force: :cascade do |t|
-    t.string   "github_repo"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "refinery_extension_inquiries", ["id"], name: "index_refinery_extension_inquiries_on_id", using: :btree
-
   create_table "refinery_extensions", force: :cascade do |t|
     t.string   "title"
     t.text     "body"
     t.string   "source_url"
     t.string   "author"
     t.boolean  "draft"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "refinery_guides", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.text     "raw_source"
+    t.text     "html"
+    t.string   "author"
+    t.string   "category"
+    t.string   "source_url"
+    t.string   "sha"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"

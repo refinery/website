@@ -1,0 +1,55 @@
+<%= form_for [refinery, :guides_admin, @guide] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @guide,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :raw_source %>
+    <%= f.text_area :raw_source %>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:description, :html],
+                :object => "guides/guide" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :author -%>
+    <%= f.text_field :author -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :category -%>
+    <%= f.text_field :category -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :sha %>
+    <%= f.text_field :sha %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :source_url -%>
+    <%= f.text_field :source_url -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.guides.admin.guides.guide'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @guide.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>
