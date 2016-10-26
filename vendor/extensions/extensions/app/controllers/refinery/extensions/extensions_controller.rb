@@ -33,11 +33,11 @@ module Refinery
     protected
 
       def find_versions
-        @ext_versions = Extension.live.tag_counts_on(:versions)
+        @ext_versions = Extension.live.tag_counts_on(:versions).order(name: :desc)
       end
 
       def find_types
-        @ext_types = Extension.live.tag_counts_on(:types)
+        @ext_types = Extension.live.tag_counts_on(:types).order(:name)
       end
 
       def find_all_extensions

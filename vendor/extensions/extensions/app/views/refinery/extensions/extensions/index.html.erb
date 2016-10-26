@@ -1,20 +1,22 @@
 <% content_for :body do %>
   <% if @ext_versions.any? || @ext_types.any? %>
     <div class="filters">
-      <h2><%= t('.title') %></h2>
-      <%= link_to 'All', refinery.extensions_extensions_path %>
-      <% if @ext_versions.any? %>
-        <nav id='ext_versions'>
-          <% tag_cloud(@ext_versions, %w(tag1 tag2 tag3 tag4)) do |version, css_class| %>
-            <%= link_to version.name, refinery.extensions_version_extensions_path(version.id, version.name.parameterize), :class => css_class %>
+      <%= link_to t('.see_all_extensions'), refinery.extensions_extensions_path %>
+
+      <% if @ext_types.any? %>
+        <nav id='ext_types'>
+          <span><%= t('.filters') %></span>:
+          <% tag_cloud(@ext_types, %w(tag1 tag2 tag3 tag4)) do |type, css_class| %>
+            <%= link_to type.name, refinery.extensions_type_extensions_path(type.id, type.name.parameterize), :class => css_class %>
           <% end %>
         </nav>
       <% end %>
 
-      <% if @ext_types.any? %>
-        <nav id='ext_types'>
-          <% tag_cloud(@ext_types, %w(tag1 tag2 tag3 tag4)) do |type, css_class| %>
-            <%= link_to type.name, refinery.extensions_type_extensions_path(type.id, type.name.parameterize), :class => css_class %>
+      <% if @ext_versions.any? %>
+        <nav id='ext_versions'>
+          <span><%= t('.versions') %></span>:
+          <% tag_cloud(@ext_versions, %w(tag1 tag2 tag3 tag4)) do |version, css_class| %>
+            <%= link_to version.name, refinery.extensions_version_extensions_path(version.id, version.name.parameterize), :class => css_class %>
           <% end %>
         </nav>
       <% end %>
@@ -23,19 +25,32 @@
 
   <ul id="extensions">
     <% @extensions.each do |extension| %>
-      <li class="hr">
+      <li>
+        <% if (types_list = extension.types.most_used.reject{ |t| t.name == 'official' || t.name == 'community' }).any? %>
+          <div class='types-list'>
+            <%= t('.filters') %>:
+            <%=raw types_list.collect { |type| link_to type.name, refinery.extensions_type_extensions_path(type.id, type.name.parameterize) }.to_sentence %>
+          </div>
+        <% end %>
+
         <div class="title">
           <h2>
-          <%= link_to extension.title, extension.source_url, target: '_blank' %>
+            <%= link_to extension.title, extension.source_url, target: '_blank' %>
           </h2>
-          <div class="types">
-            <% extension.types.most_used.each do |type| %>
-              <span class="type <%= type.name.to_s %>"><%= type.name %></span>
-            <% end %>
-          </div>
+          <% if (types_badge = extension.types.select{ |t| t.name == 'official' || t.name == 'community'}).any? %>
+            <div class="types-badge">
+              <% types_badge.each do |type| %>
+                <span class="type <%= type.name.to_s %>">
+                  <%= link_to type.name, refinery.extensions_type_extensions_path(type.id, type.name.parameterize) %>
+                </span>
+              <% end %>
+            </div>
+          <% end %>
         </div>
+
         <%= raw extension.body %>
-        <p>
+
+        <p class="compatibility">
           <em><%= t('.works_with_refinery_cms', versions: extension.versions.order('name DESC').to_sentence) %></em>
         </p>
       </li>
@@ -43,4 +58,6 @@
   </ul>
 <% end %>
 
-<%= render '/refinery/content_page' %>
+<div class="wrapper">
+  <%= render '/refinery/content_page' %>
+</div>

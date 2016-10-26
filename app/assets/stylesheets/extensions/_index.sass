@@ -1,0 +1,84 @@
+#extensions-page
+  .filters
+    a
+      color: $primary_color
+      display: inline-block
+      margin: 0.25em
+
+    nav
+      margin: 1em 0
+
+      span
+        font-weight: bolder
+
+  #extensions
+    li
+      display: block
+      font-size: em(16)
+      margin-bottom: 2em
+
+      .types-list
+        font-size: em(12)
+        font-weight: bolder
+        margin-top: 1em
+
+        a
+          text-decoration: none
+          text-transform: capitalize
+
+          &:hover
+            text-decoration: underline
+
+
+      .title
+        h2
+          display: inline-block
+          font-size: em(20)
+          font-weight: bolder
+          margin: 0.25em 0 0em
+          vertical-align: baseline
+
+          a
+            color: $dark_color
+            text-decoration: none
+
+            &:hover
+              text-decoration: underline
+
+        .types-badge
+          display: inline-block
+          vertical-align: middle
+
+          .type
+            background-color: $grey_color
+            border-radius: 0.5em
+            color: $dark_color
+            display: inline-block
+            font-size: em(12)
+            font-style: italic
+            padding: 0 0.4em
+            margin-right: 0.25em
+            vertical-align: super
+            @include transition(background-color 0.2s ease-in-out 0s)
+
+            a
+              color: #fff
+              text-decoration: none
+
+            &.official
+              background-color: $primary_color
+
+              &:hover
+                background-color: darken($primary_color, 20%)
+
+
+            &.community
+              background-color: $secondary_color
+
+              &:hover
+                background-color: darken($secondary_color, 20%)
+
+      p
+        &.compatibility
+          color: $dark_grey_color
+          font-size: em(12)

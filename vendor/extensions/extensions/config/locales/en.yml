@@ -20,8 +20,11 @@ en:
             delete: Remove this extension forever
       extensions:
         index:
-          works_with_refinery_cms: "Works with Refinery CMS %{versions}"
+          see_all_extensions: See all extensions
+          filters: Filters
           type: "%{types}"
+          versions: Versions
+          works_with_refinery_cms: "Works with Refinery CMS %{versions}"
         show:
           other: Other Extensions
   activerecord:
