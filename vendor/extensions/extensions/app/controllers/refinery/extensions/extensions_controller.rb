@@ -45,7 +45,7 @@ module Refinery
       end
 
       def find_page
-        @page = ::Refinery::Page.where(:link_url => "/extensions").first
+        @page = ::Refinery::Page.find_by(link_url: "/extensions")
       end
 
     end
