@@ -27,7 +27,7 @@ module Refinery
         @tag_name = @tag.name
         @extensions = Extension.live.tagged_with(@tag_name).order(:position).page(params[:page])
 
-        render :index
+        render :index, layout: @page.layout_template if @page.layout_template.present?
       end
 
     protected
