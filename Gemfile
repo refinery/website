@@ -77,7 +77,6 @@ group :production do
   # Heroku
   gem 'dragonfly-s3_data_store'
   gem 'rails_12factor'
-  gem 'rails_on_heroku'
   gem 'heroku-deflater'
   gem 'whenever', :require => false
 

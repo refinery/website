@@ -348,9 +348,6 @@ GEM
       rails_stdout_logging
     rails_autolink (1.1.6)
       rails (> 3.1)
-    rails_on_heroku (0.0.2)
-      rails_serve_static_assets
-      rails_stdout_logging
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.5)
     railties (4.2.7.1)
@@ -474,7 +471,6 @@ DEPENDENCIES
   rack-livereload
   rails (~> 4.2.6)
   rails_12factor
-  rails_on_heroku
   rb-fsevent
   readingtime
   refinerycms!
