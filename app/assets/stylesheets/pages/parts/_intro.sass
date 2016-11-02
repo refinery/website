@@ -1,18 +1,24 @@
 #introduction
   margin-bottom: 0 !important
-  padding-top: em(45)
   text-align: center
   color: $dark_color
+  @include media($tablet)
+    padding-top: em(45)
 
   h2
-    font-size: em(42)
+    font-size: em(32)
+    @include media($tablet)
+      font-size: em(42)
 
   p
     color: $text_color
 
     &.catchphrase
-      font-size: em(20)
-      line-height: em(34)
+      font-size: em(16)
+      line-height: em(24)
+      @include media($tablet)
+        font-size: em(20)
+        line-height: em(34)
 
     &.infos
       font-size: em(14)

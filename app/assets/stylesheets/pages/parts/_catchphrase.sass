@@ -1,12 +1,16 @@
 #catchphrase
   background-color: $primary_color
-  padding: em(45)
+  padding: em(15) 0
   text-align: center
   color: white
+  @include media($tablet)
+    padding: em(45)
 
   h2
     color: white
-    font-size: em(42)
+    font-size: em(21)
+    @include media($tablet)
+      font-size: em(42)
 
   p
     color: white
