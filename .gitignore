@@ -99,3 +99,4 @@ vendor/extensions/**/spec/dummy
 .rbenv-gemsets
 .ruby-version
 *.dump
+config/application.yml
