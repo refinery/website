@@ -3,9 +3,9 @@
     <div id="logo" rel="home" itemscope itemtype="http://schema.org/Organization">
       <%= link_to refinery.root_path, itemprop: "url" do %>
         <% if @page.link_url == refinery.root_path %>
-          <%= image_tag 'refinery-cms-logo-dark.png' , alt: Refinery::Core.site_name %>
+          <%= image_tag 'refinery-cms-logo-dark.svg' , alt: Refinery::Core.site_name %>
         <% else %>
-          <%= image_tag 'refinery-cms-logo.png' , alt: Refinery::Core.site_name %>
+          <%= image_tag 'refinery-cms-logo.svg' , alt: Refinery::Core.site_name %>
         <% end %>
       <% end %>
     </div>
