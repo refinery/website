@@ -13,11 +13,7 @@ module MenuHelper
   protected
 
   def menu_records(position, max_depth = 0)
-    query = Refinery::Page
-
-    if Refinery::I18n.frontend_locales.many?
-      query = query.with_translations(I18n.locale)
-    end
+    query = Refinery::Page.includes(:translations)
 
     if position != "mobile_menu"
       query = eval("query.#{position}_pages")
