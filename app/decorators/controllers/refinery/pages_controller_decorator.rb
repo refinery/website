@@ -1,4 +1,4 @@
-module RefineryPagesControllerDecoratoration
+module RefineryPagesControllerDecorator
   include ActionView::Helpers::NumberHelper
   include ActionView::Helpers::DateHelper
   include ProjectHelper
@@ -18,4 +18,4 @@ module RefineryPagesControllerDecoratoration
   end
 end
 
-Refinery::PagesController.send :prepend, RefineryPagesControllerDecoratoration
+Refinery::PagesController.send :prepend, RefineryPagesControllerDecorator
