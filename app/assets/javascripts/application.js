@@ -46,7 +46,7 @@ ready = function() {
 
   $(window).resize(function() {
     clearTimeout(timeToWait_mmenu);
-    timeToWait_mmenu = setTimeout($.fn.closeMmenu, 50);
+    var timeToWait_mmenu = setTimeout($.fn.closeMmenu, 50);
   });
 };
 
