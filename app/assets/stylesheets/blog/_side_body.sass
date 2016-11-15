@@ -2,6 +2,12 @@
   #side_body
     a
       color: $primary_color
+      font-size: em(16)
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
 
     @include media($tablet)
       border-left: 1px solid $light_grey_color
@@ -19,8 +25,8 @@
         border: none
 
     ul
+      list-style: none
       margin: 1em 0 3em 0
-      padding: 0 0 0 1.25em
 
     #rss_feed_subscribe
       display: block
@@ -33,6 +39,7 @@
       a
         display: inline-block
         margin-right: 0.5em
+        margin-bottom: 0.5em
 
 
     #blog_posts
@@ -50,7 +57,7 @@
           color: $dark_color
           display: block
           font-weight: bold
-          padding: 1em 0
+          padding: 1em 0 0
 
 
     #blog_archive_widget
