@@ -12,7 +12,7 @@ module Refinery
       end
 
       def show
-        @guide = Guide.find(params[:id])
+        @guide = Guide.friendly.find(params[:id])
 
         # you can use meta fields from your model instead (e.g. browser_title)
         # by swapping @page for @guide in the line below:

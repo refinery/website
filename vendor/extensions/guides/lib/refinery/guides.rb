@@ -19,3 +19,5 @@ module Refinery
     end
   end
 end
+
+require 'friendly_id'

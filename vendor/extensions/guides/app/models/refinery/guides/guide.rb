@@ -3,6 +3,9 @@ module Refinery
     class Guide < Refinery::Core::BaseModel
       self.table_name = 'refinery_guides'
 
+      extend FriendlyId
+      friendly_id :title, use: :slugged
+
 
       validates :title, :presence => true, :uniqueness => true
 
