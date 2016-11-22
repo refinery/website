@@ -20,3 +20,6 @@ Refinery::Extensions::Engine.load_seed
 
 # Added by RefineryCMS Copywriting engine
 Refinery::Copywriting::Engine.load_seed
+
+# Added by Refinery CMS Guides extension
+Refinery::Guides::Engine.load_seed

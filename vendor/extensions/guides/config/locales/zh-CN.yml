@@ -1,0 +1,34 @@
+zh-CN:
+  refinery:
+    plugins:
+      guides:
+        title: Guides
+    guides:
+      admin:
+        guides:
+          actions:
+            create_new: 建立新的 Guide
+            reorder: 对 Guides 重新排序
+            reorder_done: 对 Guides 的重新排序结束
+          records:
+            title: Guides
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Guides yet. Click "Add New Guide" to add your first guide.
+            no_items_yet: 目前没有 Guides . 点击 "Add New Guide" 创建一个guide.
+          guide:
+            view_live_html: 查看 guide 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 guide
+            delete: 永久删除 guide
+      guides:
+        show:
+          other: 其他 Guides
+  activerecord:
+    attributes:
+      'refinery/guides/guide':
+        title: Title
+        description: Description
+        content: Content
+        author: Author
+        category: Category
+        source_url: Source Url

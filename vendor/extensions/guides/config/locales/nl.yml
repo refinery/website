@@ -1,0 +1,32 @@
+nl:
+  refinery:
+    plugins:
+      guides:
+        title: Guides
+    guides:
+      admin:
+        guides:
+          actions:
+            create_new: Nieuwe Guide toevoegen
+            reorder: De volgorde van de Guides wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Guide-volgorde
+          records:
+            title: Guides
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Guides. Druk op 'Nieuwe Guide toevoegen' om de eerste toe te voegen.
+          guide:
+            view_live_html: Deze guide op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze guide
+            delete: Deze guide definitief verwijderen
+      guides:
+        show:
+          other: Andere Guides
+  activerecord:
+    attributes:
+      'refinery/guides/guide':
+        title: Title
+        description: Description
+        content: Content
+        author: Author
+        category: Category
+        source_url: Source Url

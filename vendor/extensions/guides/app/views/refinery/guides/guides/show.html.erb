@@ -1,0 +1,25 @@
+<% content_for :body_content_title do %>
+  <%= @guide.title %>
+<% end %>
+
+<% content_for :body do %>
+  <article>
+    <header>
+      <%=raw @guide.author %>
+      <%=raw @guide.category %>
+      <%=raw @guide.sha %>
+      <span>Source Url</span><%=link_to @guide.title, @guide.source_url if @guide.source_url %>
+    </header>
+
+    <%=raw @guide.html %>
+  </article>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other')%></h2>
+    <%= render partial: '/refinery/guides/guides/shared/guides_navigation', locals: { guides: @guides } %>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

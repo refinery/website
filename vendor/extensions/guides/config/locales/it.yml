@@ -1,0 +1,32 @@
+it:
+  refinery:
+    plugins:
+      guides:
+        title: Guides
+    guides:
+      admin:
+        guides:
+          actions:
+            create_new: Aggiungi Nuovo Guide
+            reorder: Riordina Guides
+            reorder_done: Termina il Riordino di Guides
+          records:
+            title: Guides
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Guides. Clicca "Aggiungi Nuovo Guide" per aggiungere il tuo primo guide.
+          guide:
+            view_live_html: Guarda live questo guide <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo guide
+            delete: Rimuovi per sempre questo guide
+      guides:
+        show:
+          other: Altri Guides
+  activerecord:
+    attributes:
+      'refinery/guides/guide':
+        title: Title
+        description: Description
+        content: Content
+        author: Author
+        category: Category
+        source_url: Source Url
