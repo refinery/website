@@ -44,7 +44,6 @@ class GuidesWorker
       :source_url => "https://github.com/#{@repo}/blob/#{@sha}/#{doc.path.to_s.gsub(' ', '%20')}",
       :sha => @sha
     )
-    binding.pry
 
     guide
   end
