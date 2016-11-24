@@ -1,10 +1,11 @@
-<% content_for :body_content_title do %>
+<% content_for :title do %>
   <%= @guide.title %>
 <% end %>
 
 <% content_for :body do %>
   <article>
     <header>
+      <h1><%= @guide.title %></h1>
       <%=raw @guide.author %>
       <%=raw @guide.category %>
       <%=raw @guide.sha %>
