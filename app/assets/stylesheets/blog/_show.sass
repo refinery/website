@@ -2,22 +2,26 @@
   #blog_post
     margin-bottom: 3em
 
+    a
+      color: $primary_color
+      text-decoration: none
+
+      &:hover
+        text-decoration: underline
+
+    .filled_in
+      font-size: em(14)
+      font-weight: bolder
+      margin-top: 0.5em
+
     h1
       border-bottom: 1px solid $light_grey_color
 
     .details
       margin-bottom: 2em
 
-      a
-        color: $primary_color
-        text-decoration: none
-
-        &:hover
-          text-decoration: underline
-
       div,
-      time,
-      aside
+      time
         color: $dark_grey_color
         display: inline-block
         font-size: em(12)

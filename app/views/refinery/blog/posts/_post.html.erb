@@ -5,6 +5,12 @@
 <% end %>
 <article id="blog_post">
   <header>
+    <% if (categories = @post.categories).any? %>
+      <aside class='filled_in'>
+        <%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %>
+      </aside>
+    <% end %>
+
     <h1><%= @post.title %></h1>
 
     <section class='details'>
@@ -23,15 +29,6 @@
           <%= "#{t('source', :scope => 'refinery.blog.posts.show')}: " %>
           <%= link_to (@post.source_url_title.blank? ? @post.source_url : @post.source_url_title), @post.source_url %>
         </div>
-      <% end %>
-
-      <% if (categories = @post.categories).any? %>
-        <aside class='filled_in'>
-          <%= t('filled_in', :scope => 'refinery.blog.posts.show') %>
-          <% categories.each_with_index do |category, index| %>
-            <%= link_to category.title, refinery.blog_category_path(category) -%><%= ',' if index < ((categories.length) - 1) %>
-          <% end %>
-        </aside>
       <% end %>
     </section>
 
