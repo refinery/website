@@ -116,5 +116,6 @@ gem "readingtime"
 gem "kramdown"
 gem "sidekiq"
 gem "octokit"
+gem 'active_link_to'
 
 gem 'refinerycms-guides', path: 'vendor/extensions'

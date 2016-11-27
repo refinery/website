@@ -18,7 +18,7 @@
 
 <% content_for :side_body do %>
   <aside>
-    <h2><%= t('.other')%></h2>
+    <h2 class="visuallyhidden"><%= t('.other')%></h2>
     <%= render partial: '/refinery/guides/guides/shared/guides_navigation', locals: { guides: @guides } %>
   </aside>
 <% end %>

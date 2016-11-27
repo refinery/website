@@ -6,9 +6,7 @@
 
         <ul>
           <% guides.each do |guide| %>
-            <li>
-              <%= link_to guide.title, refinery.guides_guide_path(guide) %>
-            </li>
+            <%= active_link_to guide.title, refinery.guides_guide_path(guide), wrap_tag: :li %>
           <% end %>
         </ul>
       </li>

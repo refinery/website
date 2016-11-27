@@ -1,2 +1,55 @@
 #guides-page
   .guides-show
+    #side_body
+      margin: 0.25em 0 2em
+      padding: 0
+
+      @include media($tablet)
+        padding-right: 1.5em
+
+      nav#guides
+        > ul
+          list-style: none
+          margin: 0
+
+          > li
+            margin: 0
+
+            h3
+              border-top: 1px solid $light_grey_color
+              color: $dark_color
+              text-transform: uppercase
+              font-size: em(14)
+              margin: 0 -1.7em 0 0
+              padding: 2em 1.7em 0 0
+
+            &:first-child
+              h3
+                border: none
+
+            > ul
+              margin-bottom: 3em
+
+              > li
+                display: block
+                border-top: 1px solid $light_grey_color
+
+                &:first-of-type
+                  border: none
+
+                a
+                  color: $dark_color
+                  display: block
+                  font-weight: bold
+                  padding: 1em 0 0
+                  text-decoration: none
+
+                &.active,
+                &:hover
+                  a
+                    text-decoration: underline
+
+    #body
+      @include media($tablet)
+        border-left: 1px solid $light_grey_color
+        padding-left: 1.5em
