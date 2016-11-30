@@ -114,6 +114,7 @@ gem "readingtime"
 
 # For the guides
 gem "kramdown"
+gem "coderay"
 gem "sidekiq"
 gem "octokit"
 gem 'active_link_to'
