@@ -1,6 +1,6 @@
-<% content_for :body_content_title do %>
-  <%= @page.title %>
-<% end %>
+<div class="wrapper">
+  <%= content_tag :div, @page.title, id: "body_content_title" %>
+</div>
 
 <% content_for :body do %>
   <div id="show_blog_post">
@@ -12,7 +12,7 @@
 
 <%= render '/refinery/blog/shared/body_content_right' %>
 
-<%= render "/refinery/content_page" %>
+<%= render "/refinery/content_page", hide_sections: [:body_content_title] %>
 
 <% content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend') %>
 <% content_for :javascripts do %>
