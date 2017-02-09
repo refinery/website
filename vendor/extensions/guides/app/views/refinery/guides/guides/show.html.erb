@@ -1,3 +1,7 @@
+<div class="wrapper">
+  <%= content_tag :div, @page.title, id: "body_content_title" %>
+</div>
+
 <% content_for :title do %>
   <%= @guide.title %>
 <% end %>
@@ -5,11 +9,34 @@
 <% content_for :body do %>
   <article>
     <header>
+      <% if (category = @guide.category).present? %>
+        <aside class='filled_in'>
+          <%=raw category %>
+        </aside>
+      <% end %>
+
       <h1><%= @guide.title %></h1>
-      <%=raw @guide.author %>
-      <%=raw @guide.category %>
-      <%=raw @guide.sha %>
-      <span>Source Url</span><%=link_to @guide.title, @guide.source_url if @guide.source_url %>
+
+      <section class='details'>
+        <%= content_tag(:div, t('.by', author: @guide.author), class: "guide_author") if @guide.author.present? %>
+
+        <time datetime="<%=l @guide.updated_at.to_date, format: :default %>" class="updated_at">
+          <%= t('.updated_at', when: l(@guide.updated_at.to_date, format: :default)) %>.
+        </time>
+
+        <%= content_tag :div, class: "reading_time" do %>
+          <%= t('.reading_time', time: @guide.html.reading_time(format: :long) ) %>.
+        <% end %>
+
+        <% if @guide.source_url.present? %>
+          <div class='guide_source'>
+            <%= link_to @guide.source_url do %>
+              <%= t('.source') %>
+              <%= content_tag :span, @guide.title, class: "visuallyhidden" %>
+            <% end %>
+          </div>
+        <% end %>
+      </section>
     </header>
 
     <%=raw @guide.html %>
@@ -24,5 +51,5 @@
 <% end %>
 
 <div class="guides-show wrapper">
-  <%= render '/refinery/content_page' %>
+  <%= render '/refinery/content_page', hide_sections: [:body_content_title] %>
 </div>

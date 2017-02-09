@@ -31,3 +31,4 @@ en:
       posts:
         show:
           reading_time: "%{time} read"
+

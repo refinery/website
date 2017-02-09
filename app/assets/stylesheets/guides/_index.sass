@@ -1,2 +1,26 @@
 #guides-page
   .guides-index
+    #guides-navigation
+      ul
+        list-style: none
+
+        a
+          color: $primary_color
+          font-weight: bold
+          text-decoration: none
+
+          &:hover
+            text-decoration: underline
+
+      > ul
+        > li
+          border-bottom: 1px solid $light_grey_color
+
+          > ul
+            padding-bottom: 2em
+
+      h3
+        color: $dark_color
+        font-size: em(14)
+        padding-bottom: 1em
+        text-transform: uppercase

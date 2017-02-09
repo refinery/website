@@ -7,7 +7,7 @@
       @include media($tablet)
         padding-right: 1.5em
 
-      nav#guides
+      nav#guides-navigation
         > ul
           list-style: none
           margin: 0
@@ -26,6 +26,7 @@
             &:first-child
               h3
                 border: none
+                padding-top: 0
 
             > ul
               margin-bottom: 3em
@@ -38,7 +39,6 @@
                   border: none
 
                 a
-                  color: $dark_color
                   display: block
                   font-weight: bold
                   padding: 1em 0 0
@@ -50,6 +50,32 @@
                     text-decoration: underline
 
     #body
+      header
+        a
+          color: $primary_color
+          text-decoration: none
+
+          &:hover
+            text-decoration: underline
+
+        .filled_in
+          font-size: em(14)
+          font-weight: bolder
+          margin-top: 0.5em
+
+        h1
+          border-bottom: 1px solid $light_grey_color
+          padding-bottom: 0.5em
+
+        .details
+          margin-bottom: 2em
+
+          div,
+          time
+            color: $dark_grey_color
+            display: inline-block
+            font-size: em(12)
+
       @include media($tablet)
         border-left: 1px solid $light_grey_color
         padding-left: 1.5em

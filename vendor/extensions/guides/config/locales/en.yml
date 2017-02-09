@@ -21,6 +21,10 @@ en:
       guides:
         show:
           other: Other Guides
+          by: "by %{author}"
+          updated_at: "Updated on %{when}"
+          reading_time: "%{time} read"
+          source: Original source
   activerecord:
     attributes:
       'refinery/guides/guide':
