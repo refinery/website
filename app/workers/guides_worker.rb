@@ -9,6 +9,7 @@ class GuidesWorker
 
   KRAMDOWN_OPTIONS = {
     auto_ids: true,
+    enable_coderay: true,
     coderay_line_numbers: :table,
     hard_wrap: false,
     input: "GFM", # GitHub Flavoured Markdown
