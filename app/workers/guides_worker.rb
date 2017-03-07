@@ -29,24 +29,22 @@ class GuidesWorker
   end
 
   def build_guide(doc)
-    guide = ::Refinery::Guides::Guide.where(
-      title: doc.path.split('/').last.split(' - ').last.split('.md').first,
-      sha: @sha
-    ).first_or_create
-
     metadata, markdown = fetch_guide_markdown(doc)
 
-    guide.update_attributes(
-      :description => to_html(metadata["abstract"]),
-      :raw_source => markdown,
-      :html => to_html(markdown),
-      :category => doc.path.split('/')[-2],
-      :position => guide_position(doc.path.split("#{guide.category}/").last),
-      :source_url => "https://github.com/#{@repo}/blob/#{@sha}/#{doc.path.to_s.gsub(' ', '%20')}",
-      :sha => @sha
-    )
-
-    guide
+    ::Refinery::Guides::Guide.where(
+      title: doc.path.split('/').last.split(' - ').last.split('.md').first,
+      sha: @sha
+    ).first_or_create.tap do |guide|
+      guide.update_attributes(
+        :description => to_html(metadata["abstract"]),
+        :raw_source => markdown,
+        :html => to_html(markdown),
+        :category => doc.path.split('/')[-2],
+        :position => guide_position(doc.path.split("#{guide.category}/").last),
+        :source_url => "https://github.com/#{@repo}/blob/#{@sha}/#{doc.path.to_s.gsub(' ', '%20')}",
+        :sha => @sha
+      )
+    end
   end
 
   def fetch_guide_markdown(doc)
@@ -62,7 +60,13 @@ class GuidesWorker
   def to_html(raw_source)
     return nil if raw_source.blank?
 
-    Kramdown::Document.new(raw_source, KRAMDOWN_OPTIONS).to_html
+    begin
+      Kramdown::Document.new(raw_source, KRAMDOWN_OPTIONS).to_html
+    rescue
+      puts "Failed to parse:"
+      puts raw_source.inspect
+      return nil
+    end
   end
 
   def guide_description(raw_source)
