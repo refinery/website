@@ -65,6 +65,12 @@
 
 
   #guides-page
+    .guides-index
+      .guides-categories
+        > li
+          @include span-columns(6)
+          @include omega(2n)
+
     .guides-show
       #body
         @include span-columns(8)

@@ -1,5 +1,5 @@
 <nav id="guides-navigation">
-  <ul>
+  <ul class="guides-categories">
     <% guides.group_by(&:category).sort.each do |category, guides| %>
       <li>
         <h3><%= category %></h3>
