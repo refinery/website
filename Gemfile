@@ -75,7 +75,6 @@ group :production do
   # Heroku
   gem 'dragonfly-s3_data_store'
   gem 'rails_12factor'
-  gem 'heroku-deflater'
   gem 'whenever', :require => false
 
   # Caching strategy
@@ -85,7 +84,6 @@ group :production do
   gem 'dalli'
   gem 'memcachier'
 end
-
 
 gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: '3-0-stable'
 
