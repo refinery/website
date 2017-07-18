@@ -19,7 +19,7 @@ Refinery::Resources.configure do |config|
 
   # Configure Dragonfly
   # config.dragonfly_verify_urls = true
-  # config.dragonfly_secret = "db75016716ce6030ac8dc20239a4fd9f06433f3124997acf"
+  config.dragonfly_secret = ENV['DRAGONFLY_SECRET']
   # config.dragonfly_url_format = "/system/resources/:job/:basename.:ext"
   # config.dragonfly_url_host = ""
   # config.datastore_root_path = "/Users/bricesanchez/Sites/refinery/website/refinery_website/public/system/refinery/resources"
