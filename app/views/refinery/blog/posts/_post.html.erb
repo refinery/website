@@ -14,8 +14,6 @@
     <h1><%= @post.title %></h1>
 
     <section class='details'>
-      <%= content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.username}.", :class => "blog_author") if @post.author.present? %>
-
       <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class='posted_at'>
         <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :default)) %>.
       </time>

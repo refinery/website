@@ -16,10 +16,6 @@
       <h2><%= link_to post.title, refinery.blog_post_path(post) %></h2>
 
       <div class='details'>
-        <div class="author">
-          <%= "#{t('by', :scope => 'refinery.blog.posts.show')} #{post.author.username}" if post.author.present? %>.
-        </div>
-
         <time datetime="<%=l post.published_at.to_date, :format => :default %>" class='posted_at'>
           <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(post.published_at.to_date, :format => :default)) %>
         </time>.
