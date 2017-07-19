@@ -33,4 +33,4 @@ en:
           reading_time: "%{time} read"
 
     footer:
-      copyright: Copyright © %{year} %{site_name}. Refinery CMS™ is a trademark of Resolve Digital.
+      copyright: Copyright © %{year} %{site_name}.<br> Refinery CMS™ is a trademark of Resolve Digital.
