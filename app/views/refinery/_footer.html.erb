@@ -26,7 +26,7 @@
           <% end %>
         </div>
         <div class="legals">
-          <%= t('.copyright', year: Time.now.year, site_name: Refinery::Core.site_name) %>
+          <%= t('.copyright', year: Time.now.year, site_name: Refinery::Core.site_name).html_safe %>
         </div>
       </div>
     </div>
