@@ -20,12 +20,16 @@
       <section class='details'>
         <%= content_tag(:div, t('.by', author: @guide.author), class: "guide_author") if @guide.author.present? %>
 
-        <time datetime="<%=l @guide.updated_at.to_date, format: :default %>" class="updated_at">
-          <%= t('.updated_at', when: l(@guide.updated_at.to_date, format: :default)) %>.
-        </time>
+        <% if @guide.updated_at.present? %>
+          <time datetime="<%=l @guide.updated_at.to_date, format: :default %>" class="updated_at">
+            <%= t('.updated_at', when: l(@guide.updated_at.to_date, format: :default)) %>.
+          </time>
+        <% end %>
 
-        <%= content_tag :div, class: "reading_time" do %>
-          <%= t('.reading_time', time: @guide.html.reading_time(format: :long) ) %>.
+        <% if @guide.html.present? %>
+          <%= content_tag :div, class: "reading_time" do %>
+            <%= t('.reading_time', time: @guide.html.reading_time(format: :long) ) %>.
+          <% end %>
         <% end %>
 
         <% if @guide.source_url.present? %>
