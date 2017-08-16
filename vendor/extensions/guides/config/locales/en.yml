@@ -25,6 +25,7 @@ en:
           updated_at: "Updated on %{when}"
           reading_time: "%{time} read"
           source: Original source
+          temporarily_unavailable: "This guide is temporarily unavailable on this website, you can read it on Github by clicking on the <strong>Original source</strong> link above."
   activerecord:
     attributes:
       'refinery/guides/guide':

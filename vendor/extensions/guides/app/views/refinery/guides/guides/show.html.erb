@@ -43,7 +43,11 @@
       </section>
     </header>
 
-    <%=raw @guide.html %>
+    <% if @guide.html.present? %>
+      <%=raw @guide.html %>
+    <% else %>
+      <p><%= t('.temporarily_unavailable').html_safe %></p>
+    <% end %>
   </article>
 <% end %>
 
