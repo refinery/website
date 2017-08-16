@@ -1,33 +1,34 @@
-#introduction
-  margin-bottom: 0 !important
-  text-align: center
-  color: $dark_color
-  @include media($tablet)
-    padding-top: em(45)
-
-  h2
-    font-size: em(32)
+#home-page
+  #introduction
+    margin-bottom: 0 !important
+    text-align: center
+    color: $dark_color
     @include media($tablet)
-      font-size: em(42)
+      padding-top: em(45)
 
-  p
-    color: $text_color
-
-    &.catchphrase
-      font-size: em(16)
-      line-height: em(24)
+    h2
+      font-size: em(32)
       @include media($tablet)
-        font-size: em(20)
-        line-height: em(34)
+        font-size: em(42)
 
-    &.infos
-      font-size: em(14)
+    p
+      color: $text_color
 
-    a
-      &.button
-        margin: em(10) 0
+      &.catchphrase
+        font-size: em(16)
+        line-height: em(24)
+        @include media($tablet)
+          font-size: em(20)
+          line-height: em(34)
 
-    img
-      width: 90%
-      margin-bottom: -3.55em
-      margin-top: 2em
+      &.infos
+        font-size: em(14)
+
+      a
+        &.button
+          margin: em(10) 0
+
+      img
+        width: 90%
+        margin-bottom: -3.55em
+        margin-top: 2em
