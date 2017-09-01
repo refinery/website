@@ -24,7 +24,15 @@ class TemplatesController < ApplicationController
     elsif version.present?
       # There is a problem with the 3.0.0 version template.
       # See: https://github.com/refinery/refinerycms/issues/3079
-      version = "master" if version == "3.0.0"
+
+      case version
+      when "3.0.0"
+        version = "3-0-stable"
+      when "4.0.0"
+        version = "4-0-stable"
+      else
+        version = "master"
+      end
 
       unless (version_template = template_directory.join("#{version}.rb")).file?
         Net::HTTP.start("raw.githubusercontent.com", use_ssl: true) do |http|
