@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.3.1'
+ruby '2.4.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.6'
 
 # Use PostgreSQL as the database for Active Record
-gem 'pg'
+gem 'pg', '~> 0.21'
 
 # Use puma as the web server
 gem 'puma', '>= 3.1.0'
@@ -23,11 +23,11 @@ gem 'normalize-rails'
 
 # For mobile menu, mmenu must be 5.5.3 or lower
 gem 'mmenu-rails', git: 'https://github.com/akosipc/mmenu-rails', branch: 'master'
-
+gem 'friendly_id-globalize', git: 'https://github.com/norman/friendly_id-globalize', branch: 'master'
 gem 'font-awesome-sass'
 
 # Neat bourbon RWD Framework
-gem 'neat'
+gem 'neat', '~> 1.8'
 gem 'bourbon', '~> 4.2'
 gem 'bitters'
 
@@ -85,7 +85,7 @@ group :production do
   gem 'memcachier'
 end
 
-gem 'refinerycms', git: 'https://github.com/refinery/refinerycms', branch: '3-0-stable'
+gem 'refinerycms', '~> 3.0.6'
 
 # Add support for searching inside Refinery's admin interface.
 gem 'refinerycms-acts-as-indexed', ['~> 2.0', '>= 2.0.0']
@@ -98,9 +98,9 @@ gem 'refinerycms-authentication-devise', '~> 1.0'
 
 gem 'refinerycms-copywriting', git: 'https://github.com/unixcharles/refinerycms-copywriting', branch: 'master'
 
-gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
-gem 'refinerycms-teams', git: 'https://github.com/bisscomm/refinerycms-teams', branch: 'master'
-gem 'refinerycms-page-images', '~> 3.0.0', git: "https://github.com/refinery/refinerycms-page-images", branch: "master"
+gem 'refinerycms-blog', '~> 3.0.1'
+gem 'refinerycms-teams', git: 'https://github.com/parndt/refinerycms-teams', branch: 'patch-1'
+gem 'refinerycms-page-images', '~> 3.0.0'
 
 gem 'refinerycms-extensions', path: 'vendor/extensions'
 
