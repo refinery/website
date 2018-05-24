@@ -20,7 +20,7 @@ module ProjectHelper
       end
     end
 
-    version.to_s
+    version
   end
 
   def rubygems_downloads
