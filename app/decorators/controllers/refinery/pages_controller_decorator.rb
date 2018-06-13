@@ -1,3 +1,5 @@
+require 'date'
+
 module RefineryPagesControllerDecorator
   include ActionView::Helpers::NumberHelper
   include ActionView::Helpers::DateHelper
@@ -10,7 +12,7 @@ module RefineryPagesControllerDecorator
       gem_downloads: number_with_delimiter(rubygems_downloads),
       gem_version: latest_version,
       github_watchers: number_with_delimiter(github_watchers),
-      latest_commit_date: distance_of_time_in_words(Time.now.utc - Time.parse(latest_update.first).utc),
+      latest_commit_date: Date.parse(latest_update.first),
       latest_commit_author: latest_update.last
     }
 
