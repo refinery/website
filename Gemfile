@@ -1,8 +1,9 @@
 source 'https://rubygems.org'
-ruby '2.4.2'
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.2.6'
+gem 'mime-types'
 
 # Use PostgreSQL as the database for Active Record
 gem 'pg', '~> 0.21'
@@ -95,6 +96,7 @@ gem 'refinerycms-wymeditor', ['~> 1.0', '>= 1.0.6']
 
 # The default authentication adapter
 gem 'refinerycms-authentication-devise', '~> 1.0'
+gem 'devise', git: 'https://github.com/plataformatec/devise', branch: '3-stable'
 
 gem 'refinerycms-copywriting', git: 'https://github.com/unixcharles/refinerycms-copywriting', branch: 'master'
 
