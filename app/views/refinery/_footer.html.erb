@@ -11,19 +11,35 @@
 
       <div class="wrapper nopad">
         <div class="socials">
-          <%= raw copywriting('socials', { scope: 'footer', phrase_type: 'wysiwyg' }) do %>
-            <ul>
-              <li>
-                <a class="twitter" href="https://twitter.com/refinerycms" target="_blank">
-                  <span class="fa-stack">
-                    <em class="fa fa-circle fa-stack-2x"></em>
-                    <em class="fa fa-twitter fa-stack-1x fa-inverse"></em>
-                  </span>
-                  <span class="visuallyhidden">Twitter</span>
-                </a>
-              </li>
-            </ul>
-          <% end %>
+          <ul>
+            <li>
+              <a class="twitter" href="https://twitter.com/refinerycms" target="_blank">
+              <span class="fa-stack">
+              <em class="fa fa-circle fa-stack-2x"></em>
+              <em class="fa fa-twitter fa-stack-1x fa-inverse"></em>
+              </span>
+              <span class="visuallyhidden">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a class="facebook" href="https://www.facebook.com/refinerycms" target="_blank">
+              <span class="fa-stack">
+              <em class="fa fa-circle fa-stack-2x"></em>
+              <em class="fa fa-facebook fa-stack-1x fa-inverse"></em>
+              </span>
+              <span class="visuallyhidden">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a class="github" href="https://github.com/refinery/refinerycms" target="_blank">
+              <span class="fa-stack">
+              <em class="fa fa-circle fa-stack-2x"></em>
+              <em class="fa fa-github fa-stack-1x fa-inverse"></em>
+              </span>
+              <span class="visuallyhidden">Github</span>
+              </a>
+            </li>
+          </ul>
         </div>
         <div class="legals">
           <%= t('.copyright', year: Time.now.year, site_name: Refinery::Core.site_name).html_safe %>
