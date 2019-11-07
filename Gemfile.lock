@@ -224,7 +224,7 @@ GEM
       railties (>= 3.2.16)
     json (1.8.6)
     kgio (2.11.2)
-    kramdown (1.16.2)
+    kramdown (2.1.0)
     launchy (2.4.3)
       addressable (~> 2.3)
     letter_opener (1.6.0)
