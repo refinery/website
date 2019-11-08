@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 ruby '2.5.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 4.2.6'
+gem 'rails', '~> 4.2.11'
 gem 'mime-types'
 
 # Use PostgreSQL as the database for Active Record
