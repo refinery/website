@@ -273,7 +273,7 @@ GEM
     rack (1.6.11)
     rack-cache (1.7.1)
       rack (>= 0.4)
-    rack-livereload (0.3.16)
+    rack-livereload (0.3.17)
       rack
     rack-protection (2.0.1)
       rack
