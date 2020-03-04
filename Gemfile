@@ -114,6 +114,7 @@ gem "readingtime"
 
 # For the guides
 gem "kramdown"
+gem "kramdown-parser-gfm"
 gem "coderay"
 gem "sidekiq"
 gem "octokit"

@@ -1,6 +1,7 @@
 require "kramdown"
 require "octokit"
 require "base64"
+require 'kramdown-parser-gfm'
 
 # LANG=en_US.UTF-8 kramdown -i GFM getting-started.md --no-hard-wrap --coderay-line-numbers table --smart-quotes apos,apos,quot,quot > getting-started.html
 
@@ -62,8 +63,8 @@ class GuidesWorker
 
     begin
       Kramdown::Document.new(raw_source, KRAMDOWN_OPTIONS).to_html
-    rescue
-      puts "Failed to parse:"
+    rescue ::Exception => e
+      puts "Failed to parse: #{e}"
       puts raw_source.inspect
       return nil
     end
