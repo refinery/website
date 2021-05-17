@@ -28,7 +28,7 @@ gem 'friendly_id-globalize', git: 'https://github.com/norman/friendly_id-globali
 gem 'font-awesome-sass'
 
 # Neat bourbon RWD Framework
-gem 'neat', '~> 1.8'
+gem 'neat', '~> 4.0'
 gem 'bourbon', '~> 4.2'
 gem 'bitters'
 
