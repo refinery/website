@@ -29,7 +29,7 @@ gem 'font-awesome-sass'
 
 # Neat bourbon RWD Framework
 gem 'neat', '~> 1.8'
-gem 'bourbon', '~> 4.2'
+gem 'bourbon', '~> 6.0'
 gem 'bitters'
 
 # Use jquery as the JavaScript library
