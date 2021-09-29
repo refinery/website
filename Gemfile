@@ -6,7 +6,7 @@ gem 'rails', '~> 4.2.11'
 gem 'mime-types'
 
 # Use PostgreSQL as the database for Active Record
-gem 'pg', '~> 0.21'
+gem 'pg', '~> 1.2'
 
 # Use puma as the web server
 gem 'puma', '>= 3.1.0'
