@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/norman/friendly_id-globalize
-  revision: b5c1b8b442f62d174759000facf5fb8b0eed280e
+  revision: 9e9bce836dea7b4e5db615bf27a0a35f0aa11897
   branch: master
   specs:
     friendly_id-globalize (1.0.0.alpha4)
