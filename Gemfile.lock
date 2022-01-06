@@ -340,7 +340,7 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rdoc (6.3.2)
+    rdoc (6.3.3)
     readingtime (0.4.0)
     redis (4.4.0)
     refinerycms (3.0.6)
@@ -437,8 +437,8 @@ GEM
     sawyer (0.8.2)
       addressable (>= 2.3.5)
       faraday (> 0.8, < 2.0)
-    sdoc (2.2.0)
-      rdoc (>= 5.0)
+    sdoc (2.3.0)
+      rdoc (>= 5.0, < 6.4.0)
     seo_meta (2.0.1)
       railties (>= 3.0.0)
     sextant (0.2.4)
@@ -538,7 +538,7 @@ DEPENDENCIES
   refinerycms-teams!
   refinerycms-wymeditor (~> 1.0, >= 1.0.6)
   sass-rails (~> 5.0)
-  sdoc (~> 2.2.0)
+  sdoc (~> 2.3.0)
   sextant
   sidekiq
   turbolinks
